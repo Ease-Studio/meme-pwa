@@ -1,0 +1,92 @@
+[
+  {
+    "id": "human",
+    "name": "human",
+    "iconUrl": "",
+    "type": "object"
+  },
+  {
+    "id": "cat",
+    "name": "cat",
+    "iconUrl": "",
+    "type": "object"
+  },
+  {
+    "id": "dog",
+    "name": "dog",
+    "iconUrl": "",
+    "type": "object"
+  },
+  {
+    "id": "other",
+    "name": "other",
+    "iconUrl": "",
+    "type": "object"
+  },
+  {
+    "id": "enjoyment",
+    "name": "enjoyment",
+    "iconUrl": "",
+    "type": "emotion"
+  },
+  {
+    "id": "fear",
+    "name": "fear",
+    "iconUrl": "",
+    "type": "emotion"
+  },
+  {
+    "id": "sad",
+    "name": "sad",
+    "iconUrl": "",
+    "type": "emotion"
+  },
+  {
+    "id": "disgust",
+    "name": "disgust",
+    "iconUrl": "",
+    "type": "emotion"
+  },
+  {
+    "id": "anger",
+    "name": "anger",
+    "iconUrl": "",
+    "type": "emotion"
+  },
+  {
+    "id": "truth",
+    "name": "truth",
+    "iconUrl": "",
+    "type": "content_fit"
+  },
+  {
+    "id": "lie",
+    "name": "lie",
+    "iconUrl": "",
+    "type": "content_fit"
+  },
+  {
+    "id": "opinion",
+    "name": "opinion",
+    "iconUrl": "",
+    "type": "content_fit"
+  },
+  {
+    "id": "statement",
+    "name": "statement",
+    "iconUrl": "",
+    "type": "content_fit"
+  },
+  {
+    "id": "argument",
+    "name": "argument",
+    "iconUrl": "",
+    "type": "content_fit"
+  },
+  {
+    "id": "joke",
+    "name": "joke",
+    "iconUrl": "",
+    "type": "content_fit"
+  }
+]
