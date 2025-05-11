@@ -1,6 +1,6 @@
 {
-    "name": "meme",
-    "short_name": "meme",
+    "name": "Meme Express",
+    "short_name": "Meme Express",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#hexcode",
