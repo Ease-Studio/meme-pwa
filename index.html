@@ -36,24 +36,15 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1582457510";
+    const serviceWorkerVersion = "4066215043";
   </script>
+  <!-- This script adds the flutter initialization JS code -->
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4984850515409200"
+          crossorigin="anonymous"></script>
 
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4984850515409200"
-        crossorigin="anonymous"></script>
-<!-- meme-pwa-ads-unit -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4984850515409200"
-     data-ad-slot="2354743088"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <script src="flutter.js" defer></script>
   <script>
     window.addEventListener('load', function(ev) {
@@ -66,9 +57,55 @@
           engineInitializer.initializeEngine().then(function(appRunner) {
             appRunner.runApp();
           });
+          // ✅ Wait for Flutter to render first frame
+          waitForFlutterRender(() => {
+            // ✅ Delay 5 seconds before injecting AdSense
+            setTimeout(injectAdsenseIns, 5000);
+          });
         }
       });
     });
+    function waitForFlutterRender(callback) {
+    const check = () => {
+      const flutterView = document.querySelector('flt-glass-pane');
+      if (flutterView) {
+        callback();
+      } else {
+        requestAnimationFrame(check);
+      }
+    };
+    check();
+  }
+
+  function injectAdsenseIns() {
+    console.log('injectAdsenseIns');
+    // Avoid double injection
+    if (document.getElementById('adsense-ins')) return;
+
+    const container = document.createElement('div');
+    container.style.width = '100%';
+    container.style.textAlign = 'center';
+    container.style.marginTop = '16px';
+
+    const ins = document.createElement('ins');
+    ins.id = 'adsense-ins';
+    ins.className = 'adsbygoogle';
+    ins.style.display = 'block';
+    ins.setAttribute('data-ad-client', 'ca-pub-4984850515409200');
+    ins.setAttribute('data-ad-slot', '2354743088');
+    ins.setAttribute('data-ad-format', 'auto');
+    ins.setAttribute('data-full-width-responsive', 'true');
+
+    container.appendChild(ins);
+    document.body.appendChild(container);
+
+    // ✅ Safe AdSense push
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.warn('Adsense push failed:', e);
+    }
+  }
   </script>
 </body>
 </html>
