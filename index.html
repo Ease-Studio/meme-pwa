@@ -36,7 +36,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "4066215043";
+    const serviceWorkerVersion = "18999636";
   </script>
   <!-- This script adds the flutter initialization JS code -->
 
@@ -59,8 +59,8 @@
           });
           // ✅ Wait for Flutter to render first frame
           waitForFlutterRender(() => {
-            // ✅ Delay 5 seconds before injecting AdSense
-            // setTimeout(injectAdsenseIns, 5000);
+            // ✅ Delay 7 seconds before injecting AdSense
+            setTimeout(injectAdsenseIns, 7000);
           });
         }
       });
@@ -85,7 +85,7 @@
     const container = document.createElement('div');
     container.style.width = '100%';
     container.style.textAlign = 'center';
-    container.style.marginTop = '16px';
+    container.style.marginTop = '0px';
 
     const ins = document.createElement('ins');
     ins.id = 'adsense-ins';
@@ -97,7 +97,11 @@
     ins.setAttribute('data-full-width-responsive', 'true');
 
     container.appendChild(ins);
-    document.body.appendChild(container);
+
+    const adsContainer = document.getElementById('ad-1')
+    if (adsContainer) {
+      adsContainer.appendChild(container);
+    }
 
     // ✅ Safe AdSense push
     try {
