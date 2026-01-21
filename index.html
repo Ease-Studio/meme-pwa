@@ -37,7 +37,7 @@
 
     <script>
         // The value below is injected by flutter build, do not touch.
-        const serviceWorkerVersion = "731290201";
+        const serviceWorkerVersion = "166402100";
     </script>
     <!-- This script adds the flutter initialization JS code -->
 
@@ -85,7 +85,7 @@
           // ✅ Wait for Flutter to render first frame
           waitForFlutterRender(() => {
             // ✅ Delay 7 seconds before injecting AdSense
-            setTimeout(injectAdsenseIns, 7000);
+            // setTimeout(injectAdsenseIns, 7000); // TODO: Adsense rejected this
           });
         }
       });
@@ -135,175 +135,6 @@
       console.warn('Adsense push failed:', e);
     }
   }
-</script>
-
-<main>
-    <header class="app__header container">
-        <div class="app__logo-wrapper"><img class="app__logo" src="assets/icon.webp"
-                                            alt="Meme Express"></div>
-        <div class="app__infos">
-            <h1 class="app__name">Meme Express</h1>
-            <p class="app__description">
-                A meme editor that just works. <br>
-                <strong>No watermark</strong>. <br>
-                <strong>No signup required</strong>. <br>
-                Built-in with <strong>10.000+</strong> meme templates.
-            </p>
-            <div class="app__buttons app__buttons--desktop">
-                <a href="https://play.google.com/store/apps/details?id=com.ease_studio.meme"
-                   class="app__button-play" target="_blank" title="Get on Google Play">
-                    <img src="assets/google-play-badge.png" alt="Get on Google Play">
-                </a>
-                <a href="#ios" class="app__button-ios" title="Get on Appstore">
-                    <img src="assets/ios-badge.svg" alt="Get on Appstore">
-                </a>
-                <a href="#pwa" class="app__button-web" title="Web version -->">
-                    <img src="assets/pwa-badge.png" alt="Go to website">
-                </a>
-            </div>
-        </div>
-    </header>
-    <div class="app__buttons app__buttons--mobile container">
-        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.meme"
-           class="app__button-play" target="_blank" title="Get on Google Play">
-            <img src="assets/google-play-badge.png" alt="Get on Google Play">
-        </a>
-        <a href="#ios" class="app__button-ios" title="Get on Appstore">
-            <img src="assets/ios-badge.svg" alt="Get on Appstore">
-        </a>
-        <a href="https://github.com/" class="app__button-web" target="_blank" title="Go to website">
-            <img src="assets/pwa-badge.png" alt="Web version -->">
-        </a>
-    </div>
-    <section class="app__screenshots app__section" hidden>
-        <div class="container">
-            <h2 class="app__section-title">Screenshots</h2>
-        </div>
-        <div class="app__screenshots-wrapper container-desktop">
-            <div class="app__screenshots-list">
-                <a href="assets/screenshot.png" class="lightbox">
-                    <img src="assets/screenshot.png" class="app__screenshot" alt=""/>
-                </a>
-                <a href="assets/screenshot.png" class="lightbox">
-                    <img src="assets/screenshot.png" class="app__screenshot" alt=""/>
-                </a>
-                <a href="assets/screenshot.png" class="lightbox">
-                    <img src="assets/screenshot.png" class="app__screenshot" alt=""/>
-                </a>
-                <a href="assets/screenshot.png" class="lightbox">
-                    <img src="assets/screenshot.png" class="app__screenshot" alt=""/>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="app__fulldescription app__section container">
-        <div style="font-family: Arial, sans-serif; background: #f7f9fc; padding: 20px; color: #333;">
-
-            <!--	<h1 style="text-align: center; color: #ff4d4f;">Meme Express</h1>-->
-
-            <div style="max-width: 800px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 30px;">
-
-                <h2 style="color: #1890ff;">✨ Why choose Meme Express</h2>
-
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 15px;">
-                        <span style="font-size: 1.2em; font-weight: bold; color: #52c41a;">✔️Speed up meme creation.</span>
-                    </li>
-                    <li style="margin-bottom: 15px;">
-                        <span style="font-size: 1.2em; font-weight: bold; color: #faad14;">✔️Deliver your humor faster.</span>
-                    </li>
-                    <li>
-                        <span style="font-size: 1.2em; font-weight: bold; color: #eb2f96;">✔️Express messages precisely with funny sense </span>
-                    </li>
-                </ul>
-
-                <p style="margin-top: 30px; font-size: 1.1em; line-height: 1.6;">
-                    <strong>Meme Express</strong> has collected <span style="color: #722ed1;">thousands of meme templates</span>
-                    from popular communities and integrated them with a <strong
-                        style="color: #13c2c2;">Story-like Editor</strong>. This editor allows you
-                    to effortlessly add text and photos right on top of hilarious templates — making
-                    meme creation fun, fast, and fabulous!
-                </p>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section id="ios" class="app__featured app__section container">
-        <div class="container">
-            <h1>📱 How to Install on iOS</h1>
-            <ol>
-                <li><span class="emoji">1️⃣</span><strong>Open Safari Browser</strong><br> Yes, must
-                    be Safari (other browsers don't support this on iOS).
-                </li>
-                <li><span class="emoji">2️⃣</span><strong>Visit this website using Safari: </strong>
-                    <a href="https://ease-studio.github.io/meme-pwa/">https://ease-studio.github.io/meme-pwa/</a><br>
-                </li>
-                <li><span class="emoji">3️⃣</span><strong>Tap the Share Button</strong><br> It's the
-                    square with an up arrow at the bottom of the screen.
-                </li>
-                <li><span class="emoji">4️⃣</span><strong>Select “Add to Home Screen”</strong><br>
-                    Scroll down in the share menu and tap this option.
-                </li>
-                <li><span class="emoji">5️⃣</span><strong>Confirm</strong><br> Rename if you want,
-                    then tap <strong>Add</strong> in the top-right corner.
-                </li>
-                <li><span class="emoji">✅</span><strong>Done!</strong><br> The app icon will now
-                    appear on your home screen, ready to use!
-                </li>
-            </ol>
-        </div>
-    </section>
-    <section id="pwa" class="app__featured app__section container">
-        <div class="container">
-            <h1>Web version</h1>
-            <h2 class="app__section-title">Loaded and run on this browser 👉 <br> (look to your
-                right, it is the app) </h2>
-        </div>
-    </section>
-    <section class="app__featured app__section container">
-        <!--	<h2 class="app__section-title">Featured in</h2>-->
-        <!--	<div class="app__featured-content">-->
-        <!--		<a href="https://www.producthunt.com/products/meme-express?launch=meme-express" target="_blank" class="app__featured-company">-->
-        <!--			<img src="assets/producthunt.png" class="app__featured-image">-->
-        <!--		</a> -->
-        <!--		<a href="https://github.com/" target="_blank" class="app__featured-company"> -->
-        <!--			<img src="assets/producthunt.png" class="app__featured-image">-->
-        <!--		</a> -->
-        <!--	</div>-->
-    </section>
-</main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__container">
-            <p class="footer__love">
-                <script>document.write('&copy;' + (new Date()).getFullYear());</script>
-                <noscript>&copy;2025</noscript>
-                All rights reserved
-                &mdash; Powered by <a href="">Ease Studio</a>
-            </p>
-            					<ul class="footer__links">
-            							<li class="footer__link">
-            								<a href="/privacy_policy.html" target="_blank">Privacy Policy</a>
-            							</li>
-            							<li class="footer__link">
-            								<a href="/about.html" target="_blank">About</a>
-            							</li>
-            <!--							<li class="footer__link">-->
-            <!--								<a href="https://n4no.com/" targe="_blank">GitHub</a>-->
-            <!--							</li>-->
-            					</ul>
-        </div>
-    </div>
-</footer>
-
-<script type="text/javascript" src="assets/tobi.min.js"/>
-</script>
-<script>
-    window.onload = function () {
-        var tobi = new Tobi();
-    };
 </script>
 </body>
 </html>
