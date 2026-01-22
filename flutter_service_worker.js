@@ -3,14 +3,15 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "9c315209836ce3e1bb635bd78abdc6cb",
+const RESOURCES = {"flutter_bootstrap.js": "acaef6ec5521a27c3d6f987979e59f2f",
 "version.json": "c47e51998a49859369c989eedd3a25b8",
 "favicon.ico": "b1048146fe77b69b53de9a4ddca5c6ba",
-"index.html": "fcc70ddee7d08d413d7318b5a085d685",
-"/": "fcc70ddee7d08d413d7318b5a085d685",
+"index.html": "3f47be5f31698a293f2dbc66576cad9e",
+"/": "3f47be5f31698a293f2dbc66576cad9e",
 "about.html": "04cb1f06673cc32d9d9b9b973c963178",
-"main.dart.js": "0f8ec1b8ce293496403c4ab269fff178",
+"main.dart.js": "b4c8ff249b6f8265c90ad21aefc00420",
 "sqlite3.wasm": "fe0b5f7d20d0d900508725319188a9a8",
+"articles/100_popular_meme_templates_explained.html": "889b34628d24dc21a928779d8c03cddc",
 "flutter.js": "76f08d47ff9f5715220992f993002504",
 "favicon.png": "b1048146fe77b69b53de9a4ddca5c6ba",
 "sqflite_sw.js": "6229315771093782ca5126f33df0965c",
@@ -2544,7 +2545,12 @@ const RESOURCES = {"flutter_bootstrap.js": "9c315209836ce3e1bb635bd78abdc6cb",
 "canvaskit/skwasm_st.js.symbols": "c7e7aac7cd8b612defd62b43e3050bdd",
 "canvaskit/canvaskit.js": "86e461cf471c1640fd2b461ece4589df",
 "canvaskit/canvaskit.wasm": "efeeba7dcc952dae57870d4df3111fad",
-"canvaskit/skwasm_st.wasm": "56c3973560dfcbf28ce47cebe40f3206"};
+"canvaskit/skwasm_st.wasm": "56c3973560dfcbf28ce47cebe40f3206",
+".idea/vcs.xml": "f990e6d29e03715a04983dd2f51d3595",
+".idea/workspace.xml": "6c99344b0115a4af4aac39c80baa2aca",
+".idea/modules.xml": "1eb3b065c55895e347308e50cd717dee",
+".idea/web.iml": "52db5efd0fe9f576a1302b8c4b5eac6c",
+".idea/misc.xml": "e6b023077aa4876dbe12734108325458"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
