@@ -5,11 +5,13 @@ Meme Express is available as a mobile app and a simplified version on web.
 Arm yourself with Meme Express before head to any online conversation :) .  
 
 # How to make a meme
-### 1. Choose a template:
+## Choose a template
 You can use one of the popular templates, search through more than 10.000 templates using the search input, or hit button "+" to upload your own template from your device. For designing from scratch, try searching "empty" or "blank" templates.
-### 2. Add customizations: 
+
+## Add customizations
 Add text, images, stickers, resize and rotate.
-### Save and share. 
+
+##  Save and share
 Hit button "Save" and then choose how to share and save your meme. 
 You can share to social apps or through your phone, or download to your device.
 
