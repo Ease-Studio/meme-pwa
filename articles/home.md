@@ -1,5 +1,5 @@
 # What is Meme Express ?
-It's a free and convenient meme maker that lets you add custom resizable text, images to meme templates. Just by installing Meme Express, you can possess a gallery of 10.000+ meme templates. You can Meme Express to customize memes shipped with it. You can also upload your own templates or start from scratch with empty templates.
+It's a free and convenient meme maker that lets you add custom resizable text, images to meme templates without watermark or signing up. Just by installing Meme Express, you can possess a gallery of 10.000+ meme templates. You can Meme Express to customize memes shipped with it. You can also upload your own templates or start from scratch with empty templates.
 Meme Express is available as a mobile app and a simplified version on web.
 
 Arm yourself with Meme Express before head to any online conversation :) .  
