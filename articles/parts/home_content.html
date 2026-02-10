@@ -21,6 +21,10 @@
         <br>
         Arm yourself with Meme Express before head to any online conversation :) .
     </p>
+    <br>
+    <p>
+        <a href="/articles/guides.html" class="btn-white">Learn more</a>
+    </p>
 </section>
 
 <!-- DOWNLOAD -->
@@ -28,17 +32,18 @@
     <h2>Download</h2>
     <div class="download-grid">
         <div class="download-card">
-            <h3>Android</h3>
-            <img src="../assets/data/img/google-play-badge.png" alt="Download Meme Express for Android" style="height:60px; cursor:pointer;" onclick="window.location.href='https://play.google.com/store/apps/details?id=com.ease_studio.meme'" />
+            <h3>Android version</h3>
+            <img src="https://storage.googleapis.com/ease_studio/meme_express/assets/google-play-badge.png" alt="Download Meme Express for Android" style="height:60px; cursor:pointer;" onclick="window.open('https://play.google.com/store/apps/details?id=com.ease_studio.meme','_blank')" />
         </div>
         <div class="download-card">
-            <h3>iOS</h3>
-            <img src="../assets/data/img/ios-badge.svg" alt="Install Meme Express for iOS" style="height:60px; cursor:pointer;" onclick="window.location.href='https://youtube.com/shorts/jJvhzI0J0w4?feature=share'" />
+            <h3>Launch webapp</h3>
+            <button class="btn-white" onclick="launchMemeExpress()">Launch as Webapp</button>
         </div>
         <div class="download-card">
-            <h3>Web</h3>
-            <img src="../assets/pwa-badge.png" alt="Launch Meme Express as PWA" style="height:60px; cursor:pointer;" onclick="launchMemeExpress" />
+            <h3>Install on iOS</h3>
+            <a class="btn-white" style="margin-top: 10px" href="https://youtube.com/shorts/jJvhzI0J0w4?feature=share" target="_blank">Tutorial</a>
         </div>
+
     </div>
 </section>
 
@@ -46,17 +51,21 @@
 <section class="articles" id="articles">
     <h2>Articles</h2>
     <div class="article-grid">
-        <div class="article-card" onclick="openArticle(1)">
-            <img src="https://picsum.photos/400/200?a" />
-            <div>Article Title 1</div>
+        <div class="article-card" onclick="openArticle('express_choices_with_meme')">
+            <img src="https://storage.googleapis.com/download/storage/v1/b/y_meme_templates/o/353.jpg?generation=1746453394922635&alt=media" />
+            <div>How to express your choices by memes</div>
         </div>
-        <div class="article-card" onclick="openArticle(2)">
-            <img src="https://picsum.photos/400/200?b" />
-            <div>Article Title 2</div>
+        <div class="article-card" onclick="openArticle('express_doubt_with_meme')">
+            <img src="https://storage.googleapis.com/download/storage/v1/b/y_meme_templates/o/480.jpg?generation=1746453602331794&alt=media" />
+            <div>How to express your doubt by memes</div>
         </div>
-        <div class="article-card" onclick="openArticle(3)">
-            <img src="https://picsum.photos/400/200?c" />
-            <div>Article Title 3</div>
+        <div class="article-card" onclick="openArticle('express_a_fact_with_meme')">
+            <img src="https://storage.googleapis.com/download/storage/v1/b/y_meme_templates/o/793.jpg?generation=1746454052116005&alt=media" />
+            <div>How to express a fact by memes</div>
+        </div>
+        <div class="article-card" onclick="openArticle('express_sarcasm_with_meme')">
+            <img src="https://storage.googleapis.com/download/storage/v1/b/y_meme_templates/o/31.jpg?generation=1746452478019993&alt=media" />
+            <div>How to express your sarcasm by memes</div>
         </div>
     </div>
 </section>
@@ -73,6 +82,34 @@
     }, 3000);
 
     function openArticle(id) {
-        window.location.href = `article-${id}.html`;
+        window.location.href = `/articles/${id}.html`;
     }
 </script>
+
+<div id="memeOverlay" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+">
+    <div style="
+    background: white;
+    padding: 24px 32px;
+    border-radius: 12px;
+    font-family: sans-serif;
+    text-align: center;
+  ">
+        <div style="font-size: 18px; margin-bottom: 8px;">
+            Launching Meme Express...
+        </div>
+        <div style="font-size: 14px; opacity: 0.7;">
+            Please wait
+        </div>
+    </div>
+</div>

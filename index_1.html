@@ -22,32 +22,36 @@
   <meta content="yes" name="apple-mobile-web-app-capable"/>
   <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
   <meta content="meme" name="apple-mobile-web-app-title"/>
-  <meta content="Meme editor, meme templates, make memes, no watermark, no signup required, 10.000+ templates, meme generator" name="description"/>
-  <meta content="Meme Express" property="og:title"/>
-  <meta content="Meme editor, meme templates, make memes, no watermark, no signup required, 10.000+ templates, meme generator" property="og:description"/>
-  <meta content="favicon.ico" property="og:image"/>
-  <link href="icons/Icon-512.webp" rel="apple-touch-icon"/>
-  <!-- Favicon -->
-  <link href="favicon.png" rel="icon" type="image/png"/>
-  <title>
-   Meme Express - Free meme editor
-  </title>
-  <link href="manifest.json" rel="manifest">
-   <script>
-    // The value below is injected by flutter build, do not touch.
+  <meta content="Meme editor, meme templates, make memes, no watermark, no signup required, 10.000+ templates, meme generator" name="description">
+   <meta content="Meme Express" property="og:title">
+    <meta content="Meme editor, meme templates, make memes, no watermark, no signup required, 10.000+ templates, meme generator" property="og:description">
+     <meta content="favicon.ico" property="og:image">
+      <link href="icons/Icon-512.webp" rel="apple-touch-icon"/>
+      <!-- Favicon -->
+      <link href="favicon.png" rel="icon" type="image/png">
+       <title>
+        Meme Express - Free meme editor
+       </title>
+       <link href="manifest.json" rel="manifest"/>
+       <script>
+        // The value below is injected by flutter build, do not touch.
         const serviceWorkerVersion = "444896547";
-   </script>
-   <!-- This script adds the flutter initialization JS code -->
-   <style>
-    html {
+       </script>
+       <!-- This script adds the flutter initialization JS code -->
+       <style>
+        html {
               scroll-behavior: smooth;
         }
         .emoji {
           font-size: 1.2rem;
           margin-right: 0.4rem;
         }
-   </style>
-  </link>
+       </style>
+      </link>
+     </meta>
+    </meta>
+   </meta>
+  </meta>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="Meme editor, meme templates, make memes, no watermark, no signup required, 10.000+ templates, meme generator" name="description"/>
@@ -81,24 +85,19 @@
   <script defer="" src="flutter.js">
   </script>
   <script>
-   function launchMemeExpress() {
-    // Show overlay
-  const overlay = document.getElementById("memeOverlay");
-  if (overlay) overlay.style.display = "flex";
-  // Download main.dart.js
-  _flutter.loader.loadEntrypoint({
-    serviceWorker: {
-      serviceWorkerVersion: serviceWorkerVersion,
-    },
-    onEntrypointLoaded: function(engineInitializer) {
-      engineInitializer.initializeEngine().then(function(appRunner) {
-        // Hide overlay when app starts
-        if (overlay) overlay.style.display = "none";
-        appRunner.runApp();
+   window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
       });
-    }
-  });
-}
+    });
   </script>
   <!-- CAROUSEL -->
   <div class="carousel-container">
