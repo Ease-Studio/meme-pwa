@@ -21,7 +21,7 @@ Meaning: You state a fact people don’t want to hear.
 ![Why Are You Booing Me](https://storage.googleapis.com/download/storage/v1/b/y_meme_templates/o/2655.jpg?generation=1746456981179702&alt=media)
 
 
-🗿 7. “Always Has Been”
+## “Always Has Been”
 
 Meaning: The fact was always true, people just notice now, but it is too late
 
@@ -30,7 +30,7 @@ Meaning: The fact was always true, people just notice now, but it is too late
 
 
 
-📉 8. “Surprised Pikachu” (Ignored Cause → Obvious Result)
+## “Surprised Pikachu” (Ignored Cause → Obvious Result)
 
 Meaning: Ignore fact → get predictable outcome.
 
