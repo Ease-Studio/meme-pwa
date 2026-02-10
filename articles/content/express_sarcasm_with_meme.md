@@ -32,7 +32,7 @@ Meaning: Fake “big brain” idea that is actually dumb.
 ![Galaxy Brain meme](https://storage.googleapis.com/download/storage/v1/b/y_meme_templates/o/353.jpg?generation=1746453394922635&alt=media)
 
 
-## 8. “Oh No… Anyway”
+## “Oh No… Anyway”
 
 Meaning: Pretending to care but actually don’t.
 
