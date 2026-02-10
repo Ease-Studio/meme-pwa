@@ -1,4 +1,4 @@
-## How to express nervouse by memes
+## How to express nervous by memes
 
 ## Sweating Guy (Nervous Choice)
 

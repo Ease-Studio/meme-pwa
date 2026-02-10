@@ -51,8 +51,8 @@ for file in files:
         <div class="article_wrapper">
         {body}
         </div>
-        </body>
         {footer_html}
+        </body>
         </html>
         """
 
@@ -158,6 +158,10 @@ function launchMemeExpress() {
       engineInitializer.initializeEngine().then(function(appRunner) {
         // Hide overlay when app starts
         if (overlay) overlay.style.display = "none";
+        document.body.innerHTML = "";
+        // (Optional) Remove body styles if landing page had layout CSS
+        document.body.removeAttribute("class");
+        document.body.removeAttribute("style");
         appRunner.runApp();
       });
     }
@@ -182,3 +186,101 @@ function launchMemeExpress() {
 
 
 replace_flutter_loader_script()
+
+
+import os
+import re
+from bs4 import BeautifulSoup
+
+
+MD_FOLDER = "./articles/content"
+TEMPLATE_HTML = "articles.html"
+OUTPUT_HTML = "./articles/index.html"
+
+
+def extract_md_info(md_text):
+    # Extract first H1 title
+    title_match = re.search(r"^#\s+(.+)", md_text, re.MULTILINE)
+    title = title_match.group(1).strip() if title_match else "Untitled"
+
+    # Extract first image URL
+    img_match = re.search(r"!\[.*?\]\((.*?)\)", md_text)
+    img_url = img_match.group(1).strip() if img_match else ""
+
+    return title, img_url
+
+
+def slugify(filename):
+    return os.path.splitext(filename)[0]
+
+
+def build_article_card(slug, title, img_url):
+    return f"""
+<div class="article-card" onclick="openArticle('{slug}')">
+    <img src="{img_url}" />
+    <div>{title}</div>
+</div>
+""".strip()
+
+
+def generate_articles():
+    cards_html = []
+
+    # Read all MD files
+    for filename in os.listdir(MD_FOLDER):
+        if filename.endswith(".md"):
+            path = os.path.join(MD_FOLDER, filename)
+
+            with open(path, "r", encoding="utf-8") as f:
+                md_text = f.read()
+
+            title, img_url = extract_md_info(md_text)
+            slug = slugify(filename)
+
+            card_html = build_article_card(slug, title, img_url)
+            cards_html.append(card_html)
+
+    return "\n".join(cards_html)
+
+
+def inject_into_template(cards_html):
+    js = """
+    function openArticle(id) {
+            window.location.href = `/articles/${id}.html`;
+        }
+    """
+    html = f"""
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        {header_html}
+        </head>
+        <body>
+        {nav_html}
+        <div class="article-grid"></div>
+        {footer_html}
+        </body>
+        <script>
+        {js}
+        </script>
+        </html>
+        """
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    grid = soup.find("div", class_="article-grid")
+
+    if grid:
+        grid.clear()
+
+        fragment = BeautifulSoup(cards_html, "html.parser")
+        grid.append(fragment)
+
+    with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
+        f.write(soup.prettify())
+
+    print("✅ Articles generated:", OUTPUT_HTML)
+
+cards = generate_articles()
+inject_into_template(cards)
+
