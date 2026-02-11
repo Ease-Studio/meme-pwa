@@ -1,38 +1,126 @@
-# What is Meme Express ?
-It's a free and convenient meme maker that lets you add custom resizable text, images to meme templates without watermark or signing up. Just by installing Meme Express, you can possess a gallery of 10.000+ meme templates. You can Meme Express to customize memes shipped with it. You can also upload your own templates or start from scratch with empty templates.
-Meme Express is available as a mobile app and a simplified version on web.
+# Meme Express – Free Meme Maker App with 10,000+ Templates (No Watermark)
 
-Arm yourself with Meme Express before head to any online conversation :) .  
+## What is Meme Express?
 
-# How to make a meme
-## Choose a template
-You can use one of the popular templates, search through more than 10.000 templates using the search input, or hit button "+" to upload your own template from your device. For designing from scratch, try searching "empty" or "blank" templates.
+![Meme Express Logo](https://storage.googleapis.com/ease_studio/meme_express/assets/icon.webp)
 
-## Add customizations
-Add text, images, stickers, resize and rotate.
+**Meme Express** is a free and easy-to-use meme maker that lets you create custom memes using resizable text, images, and stickers — with **no watermark and no sign-up required**.
 
-##  Save and share
-Hit button "Save" and then choose how to share and save your meme. 
-You can share to social apps or through your phone, or download to your device.
+By installing Meme Express, you get instant access to a gallery of **10,000+ meme templates**, including popular internet meme formats and blank templates for custom meme creation.
 
-# How can I customize my meme?
-## On mobile phone version:
-- You can move and resize the text, images or stickers by using 2 fingers, in similar manners when you create Story using Facebook app.
-- Long tap on a text or images to open a "Delete Confirm" alert, you can hit "Yes" to remove a text or image.
-- You can "Pin" meme templates from Gallery tab so it is downloaded to your phone and next time, you do not have to search for it again.
-- Created memes is saved to History tab, ready for re-sharing anytime without remaking it 
+You can:
 
-## On web version
-- If you're on a web browser such as Chrome or Safari, you can drag text / images and use sliders to resize and rotate.
-- Long press on a text or image also open a "Delete Confirm" alert, you can press "Yes" to remove.
+* Customize built-in meme templates
+* Upload your own meme templates
+* Create memes from scratch using empty templates
 
-## On all versions:
-- You can customize the font and the color of texts.
-- You can upload your own template in case of you do not find it in app's gallery
+Meme Express is available as a **mobile meme maker app** and also as a **simplified web meme generator**.
 
+👉 Arm yourself with Meme Express before heading into any online conversation 🙂
 
-## Can I use Meme Express for more than just memes?
-- Yes, you can use button "+" to add text over an image without know how to use other dedicated photo editor.
-- In the future, Meme Express will be shipped with stickers extracted from meme templates so it add for flexibility for meme creation.
+---
 
+# How to Make a Meme with Meme Express
+
+## 1. Choose a Meme Template
+
+You can:
+
+* Browse popular meme templates
+* Search across **10,000+ meme templates** using the search bar
+* Tap **"+"** to upload your own image template
+* Search **"empty"** or **"blank"** to create memes from scratch
+
+Perfect for:
+
+* Reaction memes
+* Social media memes
+* Custom meme formats
+
+---
+
+## 2. Add Customizations
+
+You can easily:
+
+* Add custom text captions
+* Add images and stickers
+* Resize, rotate, and reposition elements
+* Adjust font style and text color
+
+No design experience required.
+
+---
+
+## 3. Save and Share Your Meme
+
+Tap **Save** and choose how you want to use your meme:
+
+* Share to social media apps
+* Share through messaging apps
+* Download meme to your device
+
+---
+
+# How to Customize Memes in Meme Express
+
+## 📱 On Mobile App Version
+
+You can:
+
+* Move and resize text, images, or stickers using two-finger gestures (similar to creating Facebook or Instagram Stories)
+* Long press text or images to open **Delete Confirmation**
+* Pin favorite meme templates in the **Gallery tab** for offline use
+* Access saved memes anytime in the **History tab**
+
+---
+
+## 🌐 On Web Version
+
+If you use Meme Express on browsers like Chrome or Safari:
+
+You can:
+
+* Drag text and images freely
+* Use sliders to resize and rotate elements
+* Long press text or images to delete them
+
+---
+
+## ⭐ Available on All Versions
+
+* Customize text fonts and colors
+* Upload your own meme templates if not found in gallery
+* Create unlimited memes without watermark
+
+---
+
+# Can Meme Express Be Used for More Than Memes?
+
+Yes.
+
+Meme Express can also be used as a **simple text-on-image editor**, even if you don’t know how to use professional photo editing software.
+
+You can:
+
+* Add text captions to photos
+* Create social media quote images
+* Make quick image edits
+
+🚀 **Coming Soon:**
+Meme Express will include **stickers extracted from meme templates** to give you even more creative flexibility.
+
+---
+
+# Why Choose Meme Express?
+
+✅ Free meme maker
+✅ No watermark meme generator
+✅ No account required
+✅ 10,000+ meme templates
+✅ Mobile + Web meme creator
+✅ Upload custom meme templates
+✅ Simple meme editor for beginners
+
+---
 
