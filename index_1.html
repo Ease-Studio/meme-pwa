@@ -163,7 +163,7 @@
   <!-- ARTICLES -->
   <section class="articles" id="articles">
    <h2>
-    Articles
+    Blogs
    </h2>
    <div class="article-grid">
     <div class="article-card" onclick="openArticle('express_choices_with_meme')">
@@ -196,6 +196,12 @@
       How to express your nervous by memes
      </div>
     </div>
+    <div class="article-card" onclick="openArticle(null)">
+     <img src="https://storage.googleapis.com/ease_studio/meme_express/assets/icon.webp"/>
+     <div>
+      And more
+     </div>
+    </div>
    </div>
   </section>
   <script>
@@ -210,7 +216,11 @@
     }, 3000);
 
     function openArticle(id) {
-        window.location.href = `/articles/${id}.html`;
+        if (id) {
+            window.location.href = `/articles/${id}.html`;
+        } else {
+            window.location.href = '/articles/';
+        }
     }
   </script>
   <div id="memeOverlay" style="

@@ -49,7 +49,7 @@
 
 <!-- ARTICLES -->
 <section class="articles" id="articles">
-    <h2>Articles</h2>
+    <h2>Blogs</h2>
     <div class="article-grid">
         <div class="article-card" onclick="openArticle('express_choices_with_meme')">
             <img src="https://storage.googleapis.com/download/storage/v1/b/y_meme_templates/o/353.jpg?generation=1746453394922635&alt=media" />
@@ -71,6 +71,12 @@
             <img src="https://storage.googleapis.com/download/storage/v1/b/y_meme_templates/o/2947.jpg?generation=1746457480016902&alt=media" />
             <div>How to express your nervous by memes</div>
         </div>
+        <div class="article-card" onclick="openArticle(null)">
+            <img src="https://storage.googleapis.com/ease_studio/meme_express/assets/icon.webp"/>
+            <div>
+                And more
+            </div>
+        </div>
     </div>
 </section>
 
@@ -86,7 +92,11 @@
     }, 3000);
 
     function openArticle(id) {
-        window.location.href = `/articles/${id}.html`;
+        if (id) {
+            window.location.href = `/articles/${id}.html`;
+        } else {
+            window.location.href = '/articles/';
+        }
     }
 </script>
 
