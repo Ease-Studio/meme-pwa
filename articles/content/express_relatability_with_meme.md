@@ -1,4 +1,4 @@
-## How to express relatability by memes
+# How to express relatability by memes
 
 ---
 
