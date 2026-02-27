@@ -5,8 +5,6 @@ import os
 # Folder that contains partial HTML files
 PARTS_DIR = "articles/parts"
 
-# Output file
-OUTPUT_FILE = "final.html"
 
 # Create output folder if missing
 # os.makedirs("output", exist_ok=True)
@@ -194,8 +192,6 @@ from bs4 import BeautifulSoup
 
 
 MD_FOLDER = "./articles/content"
-TEMPLATE_HTML = "articles.html"
-OUTPUT_HTML = "./articles/index.html"
 
 
 def extract_md_info(md_text):
@@ -243,44 +239,50 @@ def generate_articles():
     return "\n".join(cards_html)
 
 
-def inject_into_template(cards_html):
-    js = """
+
+def inject_into_template(cards_html, target='index.html'):
+    # Read existing index.html
+    with open(target, "r", encoding="utf-8") as f:
+        soup = BeautifulSoup(f, "html.parser")
+
+    # ----------------------------
+    # 1️⃣ Ensure JS function exists
+    # ----------------------------
+    js_code = """
     function openArticle(id) {
-            window.location.href = `/articles/${id}.html`;
-        }
+        window.location.href = `/articles/${id}.html`;
+    }
     """
-    html = f"""
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-        {header_html}
-        </head>
-        <body>
-        {nav_html}
-        <div class="article-grid"></div>
-        {footer_html}
-        </body>
-        <script>
-        {js}
-        </script>
-        </html>
-        """
 
-    soup = BeautifulSoup(html, "html.parser")
+    # Check if function already exists
+    if "function openArticle" not in str(soup):
+        script_tag = soup.new_tag("script")
+        script_tag.string = js_code
+        soup.body.append(script_tag)
 
+    # ----------------------------
+    # 2️⃣ Append cards to grid
+    # ----------------------------
     grid = soup.find("div", class_="article-grid")
 
-    if grid:
-        grid.clear()
+    if not grid:
+        print(f"❌ .article-grid not found in {target}")
+        return
 
-        fragment = BeautifulSoup(cards_html, "html.parser")
-        grid.append(fragment)
+    fragment = BeautifulSoup(cards_html, "html.parser")
 
-    with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
-        f.write(soup.prettify())
+    # Append without clearing existing content
+    grid.append(fragment)
 
-    print("✅ Articles generated:", OUTPUT_HTML)
+    # ----------------------------
+    # 3️⃣ Save back to file
+    # ----------------------------
+    with open(target, "w", encoding="utf-8") as f:
+        f.write(str(soup))   # use str() to avoid heavy reformatting
+
+    print("✅ Cards appended and JS preserved in:", target)
+
 
 cards = generate_articles()
-inject_into_template(cards)
+inject_into_template(cards, 'index.html')
 
