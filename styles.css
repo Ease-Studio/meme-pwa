@@ -322,3 +322,11 @@ footer {
     margin-top: 0;
     font-size: 18px;
 }
+
+
+.highlight {
+    background-color: yellow;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 8px;
+}
