@@ -2,7 +2,7 @@
 
 ## What is Meme Express?
 
-![Meme Express Logo](https://storage.googleapis.com/ease_studio/meme_express/assets/icon.webp)
+![Meme Express Logo](/favicon.png)
 
 **Meme Express** is a free and easy-to-use meme maker that lets you create custom memes using resizable text, images, and stickers — with **no watermark and no sign-up required**.
 
