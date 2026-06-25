@@ -2,6 +2,9 @@ import markdown
 from jinja2 import Environment, FileSystemLoader
 import os
 
+from bs4 import BeautifulSoup
+import shutil
+
 # Folder that contains partial HTML files
 PARTS_DIR = "articles/parts"
 
@@ -22,47 +25,6 @@ nav_html = nav_template.render()
 header_html = header_template.render()
 footer_html = footer_template.render()
 
-content_dir = 'articles/content'
-
-files = os.listdir(content_dir)
-for file in files:
-    if not file.endswith('.md'):
-        continue
-    with open(os.path.join(content_dir, file), "r", encoding="utf-8") as f:
-        md_text = f.read()
-        body = markdown.markdown(md_text, extensions=[
-            "tables",
-            "fenced_code",
-            "codehilite",
-            "toc",
-            "nl2br"
-        ])
-
-        final_html = f"""
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-        {header_html}
-        </head>
-        <body>
-        {nav_html}
-        <div class="article_wrapper">
-        {body}
-        </div>
-        {footer_html}
-        </body>
-        </html>
-        """
-
-        out = os.path.join('articles', file.replace('.md', '.html'))
-        # Write output
-        with open(out, "w", encoding="utf-8") as f:
-            f.write(final_html)
-
-        print("✅ HTML generated:", out)
-
-from bs4 import BeautifulSoup
-import shutil
 
 def copy_index_file(
         src="/Users/nguyenduyy/AndroidStudioProjects/meme/build/web/index.html",
