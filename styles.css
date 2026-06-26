@@ -5,9 +5,19 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    overflow-x: hidden;
+}
+
 body {
     background: #0f0f0f;
     color: #f5f5f5;
+    overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -484,4 +494,189 @@ h2 {
 
     box-shadow: 0 4px 12px rgba(255,59,48,.4);
     z-index: 10;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+    .intro-section {
+        width: 95%;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .carousel-container {
+        width: 320px;
+        height: 570px;
+    }
+
+    .navbar {
+        padding: 14px 20px;
+    }
+
+    .download-section {
+        margin: -30px 20px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-menu a {
+        margin: 0;
+    }
+
+    /* HERO */
+    .intro-section {
+        width: 100%;
+        padding: 30px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .intro-section h1 {
+        font-size: 2rem;
+    }
+
+    .intro-section h3 {
+        font-size: 1rem;
+    }
+
+    .intro-section p {
+        font-size: 15px;
+        padding: 16px;
+        max-width: 100%;
+    }
+
+    /* PHONE */
+    .carousel-container {
+        width: 260px;
+        height: 520px;
+        order: -1;
+    }
+
+    .carousel img {
+        height: 520px;
+    }
+
+    /* DOWNLOAD */
+    .download-section {
+        margin: -20px 16px;
+        padding: 40px 20px;
+    }
+
+    .download-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .download-section p {
+        font-size: 1rem;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button-black,
+    .button-blue {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .button-wrapper {
+        width: 100%;
+    }
+
+    /* ARTICLES */
+    .articles {
+        margin: 50px auto;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article_wrapper {
+        padding: 24px 18px;
+    }
+
+    .article_wrapper h1 {
+        font-size: 1.8rem;
+    }
+
+    .article_wrapper h2 {
+        font-size: 1.4rem;
+    }
+
+    .article_wrapper h3 {
+        font-size: 1.2rem;
+    }
+
+    .article_wrapper p {
+        font-size: 1rem;
+    }
+
+    .article_wrapper table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* FLOATING BOX */
+    .intro-floating {
+        left: 10px;
+        right: 10px;
+        width: auto;
+        bottom: 10px;
+        font-size: 13px;
+        padding: 16px;
+    }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+@media (max-width: 480px) {
+    .intro-section h1 {
+        font-size: 1.7rem;
+    }
+
+    .carousel-container {
+        width: 220px;
+        height: 440px;
+    }
+
+    .carousel img {
+        height: 440px;
+    }
+
+    .download-section {
+        padding: 30px 16px;
+    }
+
+    .download-badge {
+        font-size: 9px;
+        padding: 3px 8px;
+    }
 }
