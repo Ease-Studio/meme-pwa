@@ -84,6 +84,97 @@
     </div>
 </section>
 
+<section class="faq-section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <p class="subtitle">
+            Everything you need to know about Meme Express.
+        </p>
+
+        <div class="faq-item active">
+            <button class="faq-question">
+                1. What is Meme Express?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Meme Express is a meme creation app that lets you browse thousands of templates, add your own captions, and create memes quickly on your phone or computer.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                2. Is Meme Express free to use?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Yes! All features of Meme Express are now free.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                3. Do I need an account to create memes?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    No, you can create memes without an account.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                4. How many meme templates are available?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Meme Express provides access to over 10,000 meme templates, with new templates added regularly.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                5. Can I upload my own images?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Yes. You can upload your own photos or images and turn them into memes.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                6. Why can't I find a specific meme template?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Some templates may be removed due to copyright issues or may not have been added yet.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                7. What make Meme Express different from other meme editors?
+            </button>
+            <div class="faq-answer">
+                <ul>
+                    <li>Meme Express is created by a person who actually uses memes every day, from making fun via chatting, to advertise products.</li>
+                    <li>Meme Express uses a Story-like editor to add text & images to meme. That's easier than traditional meme editors.</li>
+                    <li>Meme Express also allows users to optionally add watermarks with their own brand names.</li>
+                </ul>
+                <p>
+                    In summary, Meme Express is created from real-life need of its creator.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <script>
     /* CAROUSEL AUTO SLIDE */
     const carousel = document.getElementById('carousel');
@@ -102,4 +193,19 @@
             window.location.href = '/articles/';
         }
     }
+
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.parentElement;
+
+            // Optional: close other items
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                if (faq !== item) {
+                    faq.classList.remove('active');
+                }
+            });
+
+            item.classList.toggle('active');
+        });
+    });
 </script>
