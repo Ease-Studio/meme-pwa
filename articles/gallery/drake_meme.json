@@ -1,0 +1,46 @@
+{
+  "name": "Drake Hotline Bling",
+  "description": "A two-panel reaction meme featuring rapper Drake rejecting one option in the top panel and approving another in the bottom panel. It is commonly used to compare two alternatives, expressing dislike for one and preference for the other.",
+  "keywords": [
+    "drake",
+    "drake meme",
+    "hotline bling",
+    "drakeposting",
+    "comparison",
+    "preference",
+    "choose",
+    "reject",
+    "approve",
+    "better option",
+    "this vs that",
+    "two choices"
+  ],
+  "template_url": "https://knowyourmeme.com/memes/drakeposting",
+  "useCases": [
+    {
+      "url": "https://knowyourmeme.com/memes/drakeposting",
+      "name": "Choosing Between Two Options",
+      "description": "Shows rejecting one option while enthusiastically choosing another."
+    },
+    {
+      "url": "https://knowyourmeme.com/memes/drakeposting",
+      "name": "Old vs New",
+      "description": "Compares outdated methods with modern or preferred alternatives."
+    },
+    {
+      "url": "https://knowyourmeme.com/memes/drakeposting",
+      "name": "Personal Preferences",
+      "description": "Highlights an individual's favorite choice between two similar things, such as foods, hobbies, or entertainment."
+    },
+    {
+      "url": "https://knowyourmeme.com/memes/drakeposting",
+      "name": "Technology Comparison",
+      "description": "Used to compare programming languages, frameworks, software, or gadgets by rejecting one and endorsing another."
+    },
+    {
+      "url": "https://knowyourmeme.com/memes/drakeposting",
+      "name": "Work vs Fun",
+      "description": "Humorously contrasts responsibilities with activities people would rather do."
+    }
+  ]
+}

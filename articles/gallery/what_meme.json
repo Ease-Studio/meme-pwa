@@ -1,0 +1,39 @@
+{
+  "name": "Confused Nick Young",
+  "description": "A reaction meme featuring NBA player Nick Young looking confused, often accompanied by several question marks. It is used to express disbelief, confusion, or not understanding someone's statement or actions.",
+  "keywords": [
+    "what",
+    "confused",
+    "confusion",
+    "question",
+    "what meme",
+    "nick young",
+    "reaction",
+    "disbelief",
+    "puzzled",
+    "wait what"
+  ],
+  "template_url": "https://knowyourmeme.com/memes/confused-nick-young",
+  "useCases": [
+    {
+      "url": "https://knowyourmeme.com/memes/confused-nick-young",
+      "name": "Confusing Statements",
+      "description": "Reacting to a statement that makes little or no sense."
+    },
+    {
+      "url": "https://knowyourmeme.com/memes/confused-nick-young",
+      "name": "Questionable Decisions",
+      "description": "Expressing confusion over someone's choices or behavior."
+    },
+    {
+      "url": "https://knowyourmeme.com/memes/confused-nick-young",
+      "name": "Unexpected Situations",
+      "description": "Reacting when something happens that defies expectations."
+    },
+    {
+      "url": "https://knowyourmeme.com/memes/confused-nick-young",
+      "name": "Misunderstanding",
+      "description": "Used when someone misunderstands a topic or asks an obvious question."
+    }
+  ]
+}
