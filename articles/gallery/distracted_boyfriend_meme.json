@@ -1,6 +1,6 @@
 {
   "name": "Distracted Boyfriend",
-  "description": "A stock photo meme showing a man turning to look at another woman while his girlfriend stares at him in disbelief. It is used to represent someone abandoning or becoming distracted from one thing in favor of another.",
+  "description": " distracted bf, guy checking out another girl, man looking at other woman, jealous girlfriend, guy looking back, cheater temptation, wandering eyes, disloyal boyfriend distracted bf, guy checking out another girl, man looking at other woman, jealous girlfriend, guy looking back, cheater temptation, wandering eyes, disloyal boyfriend, unfaithful guy, guy holding hand with girl and looks back, distraction.",
   "keywords": [
     "distracted boyfriend",
     "temptation",
@@ -13,27 +13,17 @@
     "comparison",
     "object labeling"
   ],
-  "template_url": "https://knowyourmeme.com/memes/distracted-boyfriend",
+  "template_url": "https://storage.googleapis.com/y_meme_templates/3.jpg",
   "useCases": [
     {
-      "url": "https://knowyourmeme.com/memes/distracted-boyfriend",
-      "name": "Choosing a New Favorite",
-      "description": "The boyfriend represents a person, the girlfriend is the current choice, and the other woman is the newly preferred option."
+      "url": "https://scontent.fsgn5-21.fna.fbcdn.net/v/t39.30808-6/736032728_122133879711102007_2841796434267399851_n.jpg?stp=dst-jpg_tt6&cstp=mx1242x828&ctp=s1242x828&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=LuTl8gJQDksQ7kNvwH74F_Z&_nc_oc=AdoQ6_8tXe3i24xwQor0Dkfn8ipTIGE3KqOLyPJ_0TNi-vehVKPyOsP4RnnYE12gDQ8&_nc_zt=23&_nc_ht=scontent.fsgn5-21.fna&_nc_gid=MNyb5WdlvywS9K0HPRAbZg&_nc_ss=7b2a8&oh=00_AQGNIzicLbrWYaknd6qus6RJEzxMJ7L5y_Z5UHjNEFBgYQ&oe=6A7B4C5A",
+      "name": "Compare Meme Makers",
+      "description": "Editors are preferring Meme Express to others app"
     },
     {
-      "url": "https://knowyourmeme.com/memes/distracted-boyfriend",
-      "name": "Abandoning Responsibilities",
-      "description": "Used to joke about ignoring work, school, or obligations for something more enjoyable."
-    },
-    {
-      "url": "https://knowyourmeme.com/memes/distracted-boyfriend",
-      "name": "Technology Trends",
-      "description": "Represents users or companies switching from an old technology, framework, or product to a newer one."
-    },
-    {
-      "url": "https://knowyourmeme.com/memes/distracted-boyfriend",
-      "name": "Consumer Preferences",
-      "description": "Shows customers losing interest in one product after discovering a better alternative."
+      "url": "https://static.time.com/v3/assets/bltea6093859af6183b/blt033a4ec2f9ab3dd6/6988dba6096a946aa469f5b0/170829_boyfriend-meme.png?branch=production&width=1920&quality=75&auto=webp&crop=3:2",
+      "name": "Making Meme VS Find A Job",
+      "description": "when photographers enjoy making meme rather than find a job"
     }
   ]
 }

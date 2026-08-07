@@ -25,13 +25,14 @@ def search(csv_file, keywords):
     for row in matched_rows:
         meme_id = row.get("id", "").strip()
         title = row.get("title", "").strip()
+        description = row.get("description", "")
 
         if not meme_id or not title:
             continue
 
         image_url = f"https://storage.googleapis.com/y_meme_templates/{meme_id}.jpg"
 
-        print(f"{meme_id} | {title} | {image_url}")
+        print(f"{meme_id} | {title} | {image_url} | {description}")
 
 
 # Example usage

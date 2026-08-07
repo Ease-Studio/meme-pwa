@@ -25,16 +25,31 @@ def build_gallery_page(json_file, output_path):
         img = case.get("url", "").strip()
         if not img:
             continue
+        case_desc = case.get("description", "")
+        case_name = case.get("name", "")
 
         gallery_html += f"""
-        <div class="col-xl-3 col-lg-4 col-md-6 col-6 mb-4">
-            <img
-                src="{html.escape(img)}"
-                class="img-fluid rounded shadow-sm border"
-                loading="lazy"
-                alt="{name}"
-            >
+<div class="col-xl-3 col-lg-4 col-md-6 col-6 mb-4">
+
+    <div class="card h-100 shadow-sm">
+
+        <img
+            src="{html.escape(img)}"
+            class="card-img-top w-100"
+            loading="lazy"
+            alt="{case_desc}"
+            style="aspect-ratio: 1 / 1; object-fit: contain;"
+        >
+
+        <div class="card-body py-2">
+            <h6 class="card-title text-center mb-0">
+                {html.escape(case_name)}
+            </h6>
         </div>
+
+    </div>
+
+</div>
         """
 
     template_html = ""
@@ -47,6 +62,64 @@ def build_gallery_page(json_file, output_path):
         >
         """
 
+    download_section = f"""
+<hr class="my-5">
+
+<section>
+
+    <h2 class="mb-4">
+        How to Download & Edit This Template ?
+    </h2>
+
+    <div class="card">
+        <div class="card-body">
+
+            <h5>📱 Android</h5>
+
+            <ul>
+                <li>
+                    Download app from PlayStore:
+                    <a href="https://play.google.com/store/apps/details?id=com.ease_studio.meme" target="_blank">
+                        Meme Express
+                    </a>.
+                </li>
+                <li>
+                    Open the app.
+                </li>
+                <li>
+                    Search for <strong>"{name}"</strong>.
+                </li>
+            </ul>
+
+            <h5 class="mt-4">🍎 iPhone & iPad</h5>
+
+            <ul>
+                <li>
+                    Open <strong>Safari</strong>.
+                </li>
+                <li>
+                    Visit
+                    <a href="https://meme-express.io.vn" target="_blank">
+                        https://meme-express.io.vn
+                    </a>.
+                </li>
+                <li>
+                    Tap <strong>Launch on Web</strong>.
+                </li>
+                <li>
+                    Search for <strong>"{name}"</strong>.
+                </li>
+                <li>
+                    (Optionally) You can install this web as an application on iPhone: <a href="https://youtube.com/shorts/jJvhzI0J0w4?feature=share" target="_blank">see how !</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+</section>
+"""
+
     page = f"""<!doctype html>
 <html lang="en">
 <head>
@@ -54,7 +127,7 @@ def build_gallery_page(json_file, output_path):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>{name} Meme Template</title>
+<title>Download template {name} and other 1000+ templates in seconds | Meme Express</title>
 
 <meta name="description" content="{description}">
 <meta name="keywords" content="{html.escape(', '.join(keywords))}">
@@ -93,14 +166,34 @@ footer {{
 
 <nav class="navbar navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="/">
-            Meme Gallery
+
+        <a class="navbar-brand d-flex align-items-center" href="/">
+
+            <img
+                src="/assets/icon.png"
+                alt="Meme Express Logo"
+                width="40"
+                height="40"
+                class="me-3"
+            >
+
+            <div>
+                <div class="fw-bold">
+                    Meme Express
+                    <small class="text-light opacity-75">
+                     • A Good Meme Maker • Go Fun The World!
+                </small>
+                </div>
+                
+            </div>
+
         </a>
+
     </div>
 </nav>
 
 <div class="container py-5">
-
+    <h3 class="mb-4"> Download template "{name}" (and other 1000+ templates) in seconds</h1>
     <div class="row g-5">
 
         <div class="col-lg-5">
@@ -120,11 +213,13 @@ footer {{
             <div class="mb-4">
                 {keyword_html}
             </div>
-
+        
         </div>
 
     </div>
-
+    
+    {download_section}
+    
     <hr class="my-5">
 
     <h2 class="mb-4">Examples</h2>
@@ -140,7 +235,7 @@ footer {{
 <footer>
     <div class="container text-center">
         <small>
-            Generated automatically by Meme Gallery
+            Meme Express  • A Good Meme Maker • Go Fun The World!
         </small>
     </div>
 </footer>
