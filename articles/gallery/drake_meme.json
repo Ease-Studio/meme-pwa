@@ -1,11 +1,9 @@
 {
-  "name": "Drake Hotline Bling",
+  "name": "Drake",
   "description": "A two-panel reaction meme featuring rapper Drake rejecting one option in the top panel and approving another in the bottom panel. It is commonly used to compare two alternatives, expressing dislike for one and preference for the other.",
   "keywords": [
     "drake",
     "drake meme",
-    "hotline bling",
-    "drakeposting",
     "comparison",
     "preference",
     "choose",
@@ -15,32 +13,13 @@
     "this vs that",
     "two choices"
   ],
-  "template_url": "https://knowyourmeme.com/memes/drakeposting",
+  "template_url": "https://storage.googleapis.com/y_meme_templates/0.jpg",
   "useCases": [
     {
-      "url": "https://knowyourmeme.com/memes/drakeposting",
-      "name": "Choosing Between Two Options",
-      "description": "Shows rejecting one option while enthusiastically choosing another."
-    },
-    {
-      "url": "https://knowyourmeme.com/memes/drakeposting",
-      "name": "Old vs New",
-      "description": "Compares outdated methods with modern or preferred alternatives."
-    },
-    {
-      "url": "https://knowyourmeme.com/memes/drakeposting",
-      "name": "Personal Preferences",
-      "description": "Highlights an individual's favorite choice between two similar things, such as foods, hobbies, or entertainment."
-    },
-    {
-      "url": "https://knowyourmeme.com/memes/drakeposting",
-      "name": "Technology Comparison",
-      "description": "Used to compare programming languages, frameworks, software, or gadgets by rejecting one and endorsing another."
-    },
-    {
-      "url": "https://knowyourmeme.com/memes/drakeposting",
-      "name": "Work vs Fun",
-      "description": "Humorously contrasts responsibilities with activities people would rather do."
+      "url": "https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/736574856_122134026177102007_5025387603405215159_n.jpg?stp=dst-jpg_tt6&cstp=mx1242x1242&ctp=s1242x1242&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=RpB1EKPCufcQ7kNvwH6j8OD&_nc_oc=Adqms2bftqy-eiWJSWtBAHuX6sTI41hl5OIDt8aWt2f3OVQXDSHzTh2_4jndvnM_zgA&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=bEuaoHYzrBTiQvV8UtTLZA&_nc_ss=7b2a8&oh=00_AQHI2098sIGTkWJCR1KIHF3jrJhx6jP_J0ELoSQxiceumw&oe=6A7E1A7C",
+      "name": "How to Flirt",
+      "description": "Wise men should use meme to flirt women"
     }
+
   ]
 }

@@ -255,3 +255,4 @@ footer {{
 
 
 build_gallery_page(json_file='./articles/gallery/distracted_boyfriend_meme.json', output_path='./distracted_boyfriend_meme.html')
+build_gallery_page(json_file='./articles/gallery/drake_meme.json', output_path='./drake_meme.html')
