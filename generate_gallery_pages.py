@@ -1,7 +1,9 @@
 import json
 import html
 from pathlib import Path
+from typing import List, Dict
 
+pages = []
 
 def build_gallery_page(json_file, output_path):
     """Generate a self-contained HTML gallery page for a meme."""
@@ -252,7 +254,25 @@ footer {{
     output_path.write_text(page, encoding="utf-8")
 
     print(f"Generated {output_path}")
+    pages.append({
+        'title': name,
+        'href': output_path.name,
+        'image': template_url
+    })
+
+
+def build_gallery(subpages: List[Dict], output_path):
+    html = ''
+    for page in subpages:
+        ...
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    output_path.write_text(html, encoding="utf-8")
+
+    print(f"Generated {output_path}")
 
 
 build_gallery_page(json_file='./articles/gallery/distracted_boyfriend_meme.json', output_path='./distracted_boyfriend_meme.html')
 build_gallery_page(json_file='./articles/gallery/drake_meme.json', output_path='./drake_meme.html')
+build_gallery(subpages=pages, output_path='./gallery.html')
