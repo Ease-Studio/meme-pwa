@@ -34,16 +34,19 @@ def search(csv_file, keywords):
 
         print(f"{meme_id} | {title} | {image_url} | {description}")
 
+    return matched_rows
 
-# Example usage
-csv_file = "/Users/nguyenduyy/AndroidStudioProjects/meme/scripts/python/memes_output.csv"
 
-parser = argparse.ArgumentParser()
-parser.add_argument(
-    "-k",
-    type=str,
-    required=True,
-)
-args = parser.parse_args()
-keyword = args.k
-search(csv_file, [keyword])
+if __name__ == '__main__':
+    # Example usage
+    csv_file = "/Users/nguyenduyy/AndroidStudioProjects/meme/scripts/python/memes_output.csv"
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "-k",
+        type=str,
+        required=True,
+    )
+    args = parser.parse_args()
+    keyword = args.k
+    search(csv_file, [keyword])

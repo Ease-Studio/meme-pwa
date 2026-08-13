@@ -2,8 +2,95 @@ import json
 import html
 from pathlib import Path
 from typing import List, Dict
+from html import escape
+from search import search
 
 pages = []
+
+def get_install_instructions_div(name: str):
+    return f"""
+<section>
+    <h2 class="mb-4">
+        How to Download & Edit This Template ?
+    </h2>
+    <div class="card">
+        <div class="card-body">
+
+            <h5>📱 Android</h5>
+
+            <ul>
+                <li>
+                    Download app from PlayStore:
+                    <a href="https://play.google.com/store/apps/details?id=com.ease_studio.meme" target="_blank">
+                        Meme Express
+                    </a>.
+                </li>
+                <li>
+                    Open the app.
+                </li>
+                <li>
+                    Search for <strong>"{name}"</strong>.
+                </li>
+            </ul>
+
+            <h5 class="mt-4">🍎 iPhone & iPad</h5>
+
+            <ul>
+                <li>
+                    Open <strong>Safari</strong>.
+                </li>
+                <li>
+                    Visit
+                    <a href="https://meme-express.io.vn" target="_blank">
+                        https://meme-express.io.vn
+                    </a>.
+                </li>
+                <li>
+                    Tap <strong>Launch on Web</strong>.
+                </li>
+                <li>
+                    Search for <strong>"{name}"</strong>.
+                </li>
+                <li>
+                    (Optionally) You can install this web as an application on iPhone: <a href="https://youtube.com/shorts/jJvhzI0J0w4?feature=share" target="_blank">see how !</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    </section>
+    """
+
+def get_nav():
+    return """
+    <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center" href="/">
+
+            <img
+                src="/assets/icon.png"
+                alt="Meme Express Logo"
+                width="40"
+                height="40"
+                class="me-3"
+            >
+
+            <div>
+                <div class="fw-bold">
+                    Meme Express
+                    <small class="text-light opacity-75">
+                     • A Good Meme Maker • Go Fun The World!
+                </small>
+                </div>
+                
+            </div>
+
+        </a>
+
+    </div>
+</nav>
+"""
 
 def build_gallery_page(json_file, output_path):
     """Generate a self-contained HTML gallery page for a meme."""
@@ -65,61 +152,7 @@ def build_gallery_page(json_file, output_path):
         """
 
     download_section = f"""
-<hr class="my-5">
-
-<section>
-
-    <h2 class="mb-4">
-        How to Download & Edit This Template ?
-    </h2>
-
-    <div class="card">
-        <div class="card-body">
-
-            <h5>📱 Android</h5>
-
-            <ul>
-                <li>
-                    Download app from PlayStore:
-                    <a href="https://play.google.com/store/apps/details?id=com.ease_studio.meme" target="_blank">
-                        Meme Express
-                    </a>.
-                </li>
-                <li>
-                    Open the app.
-                </li>
-                <li>
-                    Search for <strong>"{name}"</strong>.
-                </li>
-            </ul>
-
-            <h5 class="mt-4">🍎 iPhone & iPad</h5>
-
-            <ul>
-                <li>
-                    Open <strong>Safari</strong>.
-                </li>
-                <li>
-                    Visit
-                    <a href="https://meme-express.io.vn" target="_blank">
-                        https://meme-express.io.vn
-                    </a>.
-                </li>
-                <li>
-                    Tap <strong>Launch on Web</strong>.
-                </li>
-                <li>
-                    Search for <strong>"{name}"</strong>.
-                </li>
-                <li>
-                    (Optionally) You can install this web as an application on iPhone: <a href="https://youtube.com/shorts/jJvhzI0J0w4?feature=share" target="_blank">see how !</a>
-                </li>
-            </ul>
-
-        </div>
-    </div>
-
-</section>
+    {get_install_instructions_div(name=name)}
 """
 
     page = f"""<!doctype html>
@@ -166,33 +199,7 @@ footer {{
 
 <body>
 
-<nav class="navbar navbar-dark bg-dark">
-    <div class="container">
-
-        <a class="navbar-brand d-flex align-items-center" href="/">
-
-            <img
-                src="/assets/icon.png"
-                alt="Meme Express Logo"
-                width="40"
-                height="40"
-                class="me-3"
-            >
-
-            <div>
-                <div class="fw-bold">
-                    Meme Express
-                    <small class="text-light opacity-75">
-                     • A Good Meme Maker • Go Fun The World!
-                </small>
-                </div>
-                
-            </div>
-
-        </a>
-
-    </div>
-</nav>
+{get_nav()}
 
 <div class="container py-5">
     <h3 class="mb-4"> Download template "{name}" (and other 1000+ templates) in seconds</h1>
@@ -219,6 +226,8 @@ footer {{
         </div>
 
     </div>
+    
+    <hr class="my-5">
     
     {download_section}
     
@@ -265,106 +274,75 @@ from pathlib import Path
 from typing import List, Dict
 
 
+
 def build_gallery(subpages: List[Dict], output_path):
-    html = """<!DOCTYPE html>
+    html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Meme Templates Gallery</title>
-    <meta name="description" content="Browse our collection of popular meme templates and find the perfect meme for your next post.">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-        }
+    <meta
+        name="description"
+        content="Browse our collection of popular meme templates and find the perfect meme for your next post."
+    >
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-item {
-            display: block;
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            text-decoration: none;
-            color: inherit;
-            box-shadow: 0 2px 8px rgba(0,0,0,.08);
-            transition: transform .2s, box-shadow .2s;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,.15);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            display: block;
-        }
-
-        .gallery-content {
-            padding: 15px;
-        }
-
-        .gallery-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 0 0 8px;
-        }
-
-        .gallery-description {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.5;
-            margin: 0;
-        }
-    </style>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 </head>
 
 <body>
-    <main class="container">
-        <h1>Meme Templates</h1>
+{get_nav()}
 
-        <div class="gallery">
+<main class="container py-4">
+
+    <h1 class="mb-4">Meme Templates</h1>
+
+    <div class="row g-3 g-md-4">
 """
 
     for page in subpages:
-        title = page.get("title", "")
-        url = page.get("href", "#")
-        image = page.get("image", "")
+        title = escape(str(page.get("title", "")))
+        url = escape(str(page.get("href", "#")))
+        image = escape(str(page.get("image", "")))
+
+        if not title:
+            continue
 
         html += f"""
-            <a class="gallery-item" href="{url}">
-                <img src="{image}" alt="{title}" loading="lazy">
-                <div class="gallery-content">
-                    <h2 class="gallery-title">{title}</h2>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <a
+                href="{url}"
+                class="text-decoration-none text-dark"
+            >
+                <div class="card h-100 shadow-sm">
+                    <img
+                        src="{image}"
+                        alt="{title}"
+                        class="card-img-top img-fluid"
+                        style="height: 200px; object-fit: contain;"
+                        loading="lazy"
+                    >
+
+                    <div class="card-body p-3">
+                        <h2 class="h6 card-title mb-0">
+                            {title}
+                        </h2>
+                    </div>
                 </div>
             </a>
+        </div>
 """
 
     html += """
-        </div>
-    </main>
+    </div>
+
+</main>
+
 </body>
 </html>
 """
@@ -377,8 +355,122 @@ def build_gallery(subpages: List[Dict], output_path):
     print(f"Generated {output_path}")
 
 
+def build_search_result_page(keyword: str, output_path):
+    csv_file = "/Users/nguyenduyy/AndroidStudioProjects/meme/scripts/python/memes_output.csv"
+    rows = search(csv_file=csv_file, keywords=[keyword])
+
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    cards = []
+    banner = None
+
+    for row in rows:
+        meme_id = str(row.get("id", "")).strip()
+        title = str(row.get("title", "")).strip()
+        description = str(row.get("description", "")).strip()
+
+        if not meme_id or not title:
+            continue
+
+        image_url = f"https://storage.googleapis.com/y_meme_templates/{meme_id}.jpg"
+
+        if not banner:
+            banner = image_url
+
+        cards.append(f"""
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="card h-100 shadow-sm">
+                <img
+                    src="{escape(image_url)}"
+                    style="height: 200px; object-fit: cover;"
+                    class="card-img-top img-fluid"
+                    alt="{escape(title)}"
+                    loading="lazy"
+                >
+                <div class="card-body p-3">
+                    <h2 class="h6 card-title mb-0">
+                        {escape(title)}
+                    </h2>
+                </div>
+            </div>
+        </div>
+        """)
+
+    gallery = "\n".join(cards)
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{escape(keyword)} Memes - Meme Express</title>
+
+    <meta
+        name="description"
+        content="Find the best {escape(keyword)} memes and meme templates. Browse, create, and download memes on Meme Express."
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="bg-light">
+
+{get_nav()}
+
+<div class="container py-4 py-md-5">
+
+    <h1 class="display-6 fw-bold mb-2">
+        "{escape(keyword)}" Memes
+    </h1>
+
+    <p class="text-secondary mb-4">
+        Browse the best {escape(keyword)} memes and meme templates.
+        Create your own meme with Meme Express.
+    </p>
+    
+    <hr class="my-2">
+
+    {get_install_instructions_div(name=keyword)}    
+    <h2 class="mb-4 mt-4">Templates</h2>
+
+    <section class="row g-3 g-md-4">
+        {gallery}
+    </section>
+
+</div>
+
+</body>
+</html>
+"""
+
+    output_path.write_text(html, encoding="utf-8")
+
+    pages.append({
+        "title": keyword,
+        "href": output_path.name,
+        "image": banner
+    })
+
+    print(f"Generated {output_path}")
+
+
+
 build_gallery_page(json_file='./articles/gallery/distracted_boyfriend_meme.json', output_path='./distracted_boyfriend_meme.html')
 build_gallery_page(json_file='./articles/gallery/drake_meme.json', output_path='./drake_meme.html')
 build_gallery_page(json_file='./articles/gallery/what_meme.json', output_path='./what_meme.html')
 build_gallery_page(json_file='./articles/gallery/speed_dating_meme.json', output_path='./speed_dating_meme.html')
+build_search_result_page(keyword='Fish', output_path='./fish_memes.html')
+build_search_result_page(keyword='Cat', output_path='./cat_memes.html')
+build_search_result_page(keyword='Dog', output_path='./dog_memes.html')
+build_search_result_page(keyword='Duck', output_path='./duck_memes.html')
+build_search_result_page(keyword='Bird', output_path='./bird_memes.html')
+build_search_result_page(keyword='Laugh', output_path='./laugh_memes.html')
+build_search_result_page(keyword='Cry', output_path='./cry_memes.html')
+build_search_result_page(keyword='Choice', output_path='./choice_memes.html')
+build_search_result_page(keyword='Spiderman', output_path='./spiderman_memes.html')
 build_gallery(subpages=pages, output_path='./gallery.html')
