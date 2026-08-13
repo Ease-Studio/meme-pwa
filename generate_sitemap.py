@@ -3,12 +3,15 @@ from datetime import datetime
 
 # 🔧 CONFIG
 BASE_URL = "https://meme-express.io.vn"
-HTML_FOLDER = "articles"
+HTML_FOLDER = "./"
 OUTPUT_FILE = "sitemap.xml"
+IGNORE_FILES = ["index_1.html", "index_tmp.html"]
 
 def get_html_files(folder):
     html_files = []
     for file in os.listdir(folder):  # ❗ no recursion
+        if file in IGNORE_FILES:
+            continue
         if file.endswith(".html"):
             full_path = os.path.join(folder, file)
             if os.path.isfile(full_path):
@@ -18,9 +21,14 @@ def get_html_files(folder):
 def path_to_url(file_path, folder):
     filename = os.path.basename(file_path)
 
-    # clean index.html → /
+    # index.html → root
     if filename == "index.html":
         return BASE_URL
+
+    folder = folder.strip("/")
+
+    if folder in ("", "."):
+        return f"{BASE_URL}/{filename}"
 
     return f"{BASE_URL}/{folder}/{filename}"
 
