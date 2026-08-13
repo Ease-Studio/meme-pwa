@@ -379,4 +379,6 @@ def build_gallery(subpages: List[Dict], output_path):
 
 build_gallery_page(json_file='./articles/gallery/distracted_boyfriend_meme.json', output_path='./distracted_boyfriend_meme.html')
 build_gallery_page(json_file='./articles/gallery/drake_meme.json', output_path='./drake_meme.html')
+build_gallery_page(json_file='./articles/gallery/what_meme.json', output_path='./what_meme.html')
+build_gallery_page(json_file='./articles/gallery/speed_dating_meme.json', output_path='./speed_dating_meme.html')
 build_gallery(subpages=pages, output_path='./gallery.html')
