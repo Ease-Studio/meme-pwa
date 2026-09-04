@@ -429,8 +429,8 @@ def build_search_result_page(keyword: str, output_path):
     </h1>
 
     <p class="text-secondary mb-4">
-        Browse the best {escape(keyword)} memes and meme templates.
-        Create your own meme with Meme Express.
+        Browse best templates for {escape(keyword)} memes.
+        Make memes with Meme Express.
     </p>
     
     <hr class="my-2">
@@ -469,8 +469,14 @@ build_search_result_page(keyword='Cat', output_path='./cat_memes.html')
 build_search_result_page(keyword='Dog', output_path='./dog_memes.html')
 build_search_result_page(keyword='Duck', output_path='./duck_memes.html')
 build_search_result_page(keyword='Bird', output_path='./bird_memes.html')
+build_search_result_page(keyword='Wolf', output_path='./wolf_memes.html')
 build_search_result_page(keyword='Laugh', output_path='./laugh_memes.html')
 build_search_result_page(keyword='Cry', output_path='./cry_memes.html')
 build_search_result_page(keyword='Choice', output_path='./choice_memes.html')
 build_search_result_page(keyword='Spiderman', output_path='./spiderman_memes.html')
+build_search_result_page(keyword='Spongebob', output_path='./spongebob_memes.html')
+build_search_result_page(keyword='Scared', output_path='./scared_memes.html')
+build_search_result_page(keyword='Thinking', output_path='./thinking_memes.html')
+build_search_result_page(keyword='Friday', output_path='./friday_memes.html')
+build_search_result_page(keyword='Shocked', output_path='./shocked_memes.html')
 build_gallery(subpages=pages, output_path='./gallery.html')
