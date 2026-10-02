@@ -35,7 +35,7 @@
   <link href="manifest.json" rel="manifest">
    <script>
     // The value below is injected by flutter build, do not touch.
-        const serviceWorkerVersion = "135862805";
+        const serviceWorkerVersion = "3535439660" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */;
    </script>
    <!-- This script adds the flutter initialization JS code -->
    <style>
@@ -51,14 +51,136 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Meme Express – Go Fun The World!
+   Meme Express – Free Meme Generator &amp; 10,000+ Meme Templates
   </title>
-  <meta content="Create funny memes instantly with Meme Express, a free meme generator and meme maker featuring 10,000+ meme templates. Add text, images, stickers, and watermarks with no signup required." name="description"/>
-  <meta content="meme generator, meme maker, meme editor, create memes online, meme templates, free memes, meme creator, make memes, no watermark meme generator, funny memes" name="keywords"/>
+  <meta content="Create funny memes in seconds with Meme Express, a free meme generator with 10,000+ templates. Add text, images and stickers. No signup, no watermark." name="description"/>
+  <!-- Homepage only: any other page using this header needs its own canonical and og:url. -->
+  <link href="https://meme-express.io.vn/" rel="canonical"/>
+  <meta content="index, follow, max-image-preview:large" name="robots"/>
+  <link href="/favicon.png" rel="icon" type="image/png"/>
+  <link href="/favicon.png" rel="apple-touch-icon"/>
+  <meta content="#181818" name="theme-color"/>
+  <!-- Link previews when the page is shared (Facebook, Zalo, X, Discord...) -->
   <meta content="website" property="og:type"/>
-  <meta content="Meme Express – Go Fun The World!" property="og:title"/>
+  <meta content="Meme Express" property="og:site_name"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="https://meme-express.io.vn/" property="og:url"/>
+  <meta content="Meme Express – Free Meme Generator &amp; 10,000+ Meme Templates" property="og:title"/>
   <meta content="Create and customize memes with 10,000+ templates. Free online meme generator with no signup required and no watermark." property="og:description"/>
+  <meta content="https://meme-express.io.vn/assets/screenshots/meme_express_homepage.png" property="og:image"/>
+  <meta content="Meme Express app home screen" property="og:image:alt"/>
+  <meta content="summary_large_image" name="twitter:card"/>
   <link href="/styles.css" rel="stylesheet"/>
+  <style>
+   /* Homepage additions (these can be moved into styles.css) */
+
+    /* Second line of the <h1> */
+    .intro-section h1 .hero-subtitle {
+        display: block;
+        margin-top: 0.3em;
+        font-size: max(0.5em, 1rem);
+        color: #ffffff;
+    }
+
+    /* "Go Fun The World" keeps the look of the old <h3> */
+    .intro-section p.hero-tagline {
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        max-width: none;
+        margin-bottom: 2rem;
+        color: #ffffff;
+        opacity: 0.8;
+        font-size: 1.17em;
+        font-weight: bold;
+        line-height: normal;
+    }
+
+    /* Download links look like the old buttons */
+    a.button-black {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* Room for the longer FAQ answers */
+    .faq-item.active .faq-answer {
+        max-height: 1000px;
+    }
+
+    .faq-answer a {
+        color: #ffd400;
+    }
+
+    /* Popular templates */
+    .templates-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 110px 20px 40px;
+        text-align: center;
+    }
+
+    .templates-section h2 {
+        color: #ffd400;
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+
+    .templates-section h3 {
+        color: #f5f5f5;
+        font-size: 1.1rem;
+        margin: 28px 0 14px;
+    }
+
+    .templates-section p {
+        color: #d0d0d0;
+        line-height: 1.7;
+    }
+
+    .template-links {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .templates-more {
+        margin-top: 28px;
+    }
+
+    /* Footer links */
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 22px;
+        margin-bottom: 14px;
+    }
+
+    footer a {
+        color: #cccccc;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: #ffd400;
+    }
+
+    @media (max-width: 768px) {
+        .intro-section p.hero-tagline {
+            font-size: 1rem;
+        }
+
+        .templates-section {
+            padding: 80px 16px 30px;
+        }
+
+        .templates-section h2 {
+            font-size: 1.7rem;
+        }
+    }
+  </style>
   <!-- Google tag (gtag.js) -->
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BS8HSYMMVF">
   </script>
@@ -72,40 +194,63 @@
   <script type="application/ld+json">
    {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Meme Express",
-        "url": "https://meme-express.io.vn",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Web, Android, iOS",
-        "description": "Create funny memes instantly with Meme Express, a free meme generator and meme maker featuring 10,000+ meme templates. Add text, images, stickers, and watermarks with no signup required.",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "featureList": [
-            "10,000+ meme templates",
-            "Story-like meme editor",
-            "No signup required",
-            "No watermark",
-            "Add text and images",
-            "Custom watermarks",
-            "Download and share memes"
-        ],
-        "publisher": {
-            "@type": "Person",
-            "name": "N.D.Y",
-            "url": "https://meme-express.io.vn"
-        }
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://meme-express.io.vn/#website",
+                "url": "https://meme-express.io.vn/",
+                "name": "Meme Express",
+                "inLanguage": "en"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://meme-express.io.vn/#app",
+                "name": "Meme Express",
+                "url": "https://meme-express.io.vn/",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "Web, Android, iOS",
+                "description": "Create funny memes instantly with Meme Express, a free meme generator and meme maker featuring 10,000+ meme templates. Add text, images, stickers, and watermarks with no signup required.",
+                "image": "https://meme-express.io.vn/favicon.png",
+                "screenshot": [
+                    "https://meme-express.io.vn/assets/screenshots/meme_express_homepage.png",
+                    "https://meme-express.io.vn/assets/screenshots/meme_express_editor.png",
+                    "https://meme-express.io.vn/assets/screenshots/meme_express_watermark.png",
+                    "https://meme-express.io.vn/assets/screenshots/meme_express_share.png"
+                ],
+                "installUrl": "https://play.google.com/store/apps/details?id=com.ease_studio.meme",
+                "sameAs": [
+                    "https://play.google.com/store/apps/details?id=com.ease_studio.meme"
+                ],
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "featureList": [
+                    "10,000+ meme templates",
+                    "Story-like meme editor",
+                    "No signup required",
+                    "No watermark",
+                    "Add text and images",
+                    "Custom watermarks",
+                    "Download and share memes"
+                ],
+                "publisher": {
+                    "@type": "Person",
+                    "name": "N.D.Y",
+                    "url": "https://meme-express.io.vn/"
+                }
+            }
+        ]
     }
   </script>
  </head>
  <body>
   <!-- NAVBAR -->
-  <div class="navbar">
+  <nav aria-label="Main" class="navbar">
    <div class="nav-left">
     <a href="/">
-     <img alt="logo" src="/favicon.png"/>
+     <img alt="Meme Express home" src="/favicon.png"/>
     </a>
     <span>
      Meme Express
@@ -115,9 +260,11 @@
     <a href="/">
      Home
     </a>
-    <a href="/gallery.html">Gallery</a>
+    <a href="/gallery.html">
+     Meme Templates
+    </a>
    </div>
-  </div>
+  </nav>
   <script defer="" src="flutter.js">
   </script>
   <script>
@@ -146,25 +293,28 @@
   </script>
   <!-- HERO -->
   <section class="intro-section">
-   <span class="carousel-container">
+   <div class="carousel-container">
     <div class="carousel" id="carousel">
-     <img src="assets/screenshots/meme_express_homepage.png"/>
-     <img src="assets/screenshots/meme_express_actions.png"/>
-     <img src="assets/screenshots/meme_express_editor.png"/>
-     <img src="assets/screenshots/meme_express_editor_2.png"/>
-     <img src="assets/screenshots/meme_express_watermark.png"/>
-     <img src="assets/screenshots/meme_express_complete.png"/>
-     <img src="assets/screenshots/meme_express_guide.png"/>
-     <img src="assets/screenshots/meme_express_share.png"/>
+     <img alt="Meme Express home screen" fetchpriority="high" src="/assets/screenshots/meme_express_homepage.png"/>
+     <img alt="Meme actions menu in Meme Express" decoding="async" fetchpriority="low" src="/assets/screenshots/meme_express_actions.png"/>
+     <img alt="Meme Express meme editor" decoding="async" fetchpriority="low" src="/assets/screenshots/meme_express_editor.png"/>
+     <img alt="Adding text and images in the Meme Express editor" decoding="async" fetchpriority="low" src="/assets/screenshots/meme_express_editor_2.png"/>
+     <img alt="Adding a custom watermark in Meme Express" decoding="async" fetchpriority="low" src="/assets/screenshots/meme_express_watermark.png"/>
+     <img alt="Finished meme in Meme Express" decoding="async" fetchpriority="low" src="/assets/screenshots/meme_express_complete.png"/>
+     <img alt="Meme Express how-to guide" decoding="async" fetchpriority="low" src="/assets/screenshots/meme_express_guide.png"/>
+     <img alt="Sharing a meme from Meme Express" decoding="async" fetchpriority="low" src="/assets/screenshots/meme_express_share.png"/>
     </div>
-   </span>
-   <span>
+   </div>
+   <div>
     <h1>
      Meme Express
+     <span class="hero-subtitle">
+      Free Meme Generator &amp; Meme Maker
+     </span>
     </h1>
-    <h3>
+    <p class="hero-tagline">
      Go Fun The World
-    </h3>
+    </p>
     <div style="margin-top:2em">
      <p>
       <span class="highlight">
@@ -178,7 +328,7 @@
                 you communicate ideas, emotions, reactions, and humor quickly.
      </p>
      <p>
-      Browse more than
+      Browse
       <span class="highlight">
        10,000+ meme templates
       </span>
@@ -193,15 +343,15 @@
                 and social media platforms instantly.
      </p>
     </div>
-   </span>
+   </div>
   </section>
   <!-- DOWNLOAD -->
-  <section class="download-section">
+  <section class="download-section" id="download">
    <h2>
     🚀 Download Meme Express
    </h2>
    <p>
-    Create memes in seconds with over
+    Create memes in seconds with
     <span class="highlight">
      10,000+ templates
     </span>
@@ -210,26 +360,146 @@
    </p>
    <div class="download-buttons">
     <span>
-     <button class="button-black" onclick="launchMemeExpress()">
+     <button class="button-black" onclick="launchMemeExpress()" type="button">
       🌐 Launch on Web
      </button>
     </span>
     <div class="button-wrapper">
-     <button class="button-black" onclick="window.open('https://play.google.com/store/apps/details?id=com.ease_studio.meme', '_blank')">
+     <a class="button-black" href="https://play.google.com/store/apps/details?id=com.ease_studio.meme" rel="noopener" target="_blank">
       📱 Download for Android
-     </button>
+     </a>
      <span class="download-badge">
       Recommended
      </span>
     </div>
     <span>
-     <button class="button-black" onclick="window.open('https://youtube.com/shorts/jJvhzI0J0w4?feature=share', '_blank')">
+     <a class="button-black" href="https://youtube.com/shorts/jJvhzI0J0w4?feature=share" rel="noopener" target="_blank">
       🍎 Install on iPhone
-     </button>
+     </a>
     </span>
    </div>
   </section>
-  <section class="faq-section">
+  <!-- POPULAR TEMPLATES: links to the gallery pages (keep in sync with generate_gallery_pages.py) -->
+  <section class="templates-section" id="templates">
+   <h2>
+    🔥 Popular Meme Templates
+   </h2>
+   <p>
+    Start from a classic template, or browse memes by topic.
+   </p>
+   <h3>
+    Classic templates
+   </h3>
+   <ul class="template-links">
+    <li>
+     <a class="btn-white" href="/drake_meme.html">
+      Drake Meme
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/distracted_boyfriend_meme.html">
+      Distracted Boyfriend Meme
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/what_meme.html">
+      Confused Nick Young Meme
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/speed_dating_meme.html">
+      Speed Dating Meme
+     </a>
+    </li>
+   </ul>
+   <h3>
+    Memes by topic
+   </h3>
+   <ul class="template-links">
+    <li>
+     <a class="btn-white" href="/cat_memes.html">
+      Cat Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/dog_memes.html">
+      Dog Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/fish_memes.html">
+      Fish Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/duck_memes.html">
+      Duck Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/bird_memes.html">
+      Bird Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/wolf_memes.html">
+      Wolf Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/laugh_memes.html">
+      Laugh Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/cry_memes.html">
+      Cry Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/choice_memes.html">
+      Choice Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/spiderman_memes.html">
+      Spiderman Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/spongebob_memes.html">
+      Spongebob Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/scared_memes.html">
+      Scared Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/thinking_memes.html">
+      Thinking Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/friday_memes.html">
+      Friday Memes
+     </a>
+    </li>
+    <li>
+     <a class="btn-white" href="/shocked_memes.html">
+      Shocked Memes
+     </a>
+    </li>
+   </ul>
+   <p class="templates-more">
+    <a class="btn-white" href="/gallery.html">
+     See all meme templates →
+    </a>
+   </p>
+  </section>
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
    <div class="container">
     <h2>
      Frequently Asked Questions
@@ -238,88 +508,185 @@
      Everything you need to know about Meme Express.
     </p>
     <div class="faq-item active">
-     <button class="faq-question">
-      1. What is Meme Express?
-     </button>
-     <div class="faq-answer">
+     <h3>
+      <button aria-controls="faq-answer-1" aria-expanded="true" class="faq-question" type="button">
+       What is Meme Express?
+      </button>
+     </h3>
+     <div class="faq-answer" id="faq-answer-1">
       <p>
-       Meme Express is a meme creation app that lets you browse thousands of templates, add your own captions, and create memes quickly on your phone or computer.
+       Meme Express is a free meme maker app that lets you browse 10,000+ meme templates, add your own captions, and create memes quickly on your phone or computer.
       </p>
      </div>
     </div>
     <div class="faq-item">
-     <button class="faq-question">
-      2. Is Meme Express free to use?
-     </button>
-     <div class="faq-answer">
+     <h3>
+      <button aria-controls="faq-answer-2" aria-expanded="false" class="faq-question" type="button">
+       Is Meme Express free to use?
+      </button>
+     </h3>
+     <div class="faq-answer" id="faq-answer-2">
       <p>
        Yes! All features of Meme Express are now free.
       </p>
      </div>
     </div>
     <div class="faq-item">
-     <button class="faq-question">
-      3. Do I need an account to create memes?
-     </button>
-     <div class="faq-answer">
+     <h3>
+      <button aria-controls="faq-answer-3" aria-expanded="false" class="faq-question" type="button">
+       Do I need an account to create memes?
+      </button>
+     </h3>
+     <div class="faq-answer" id="faq-answer-3">
       <p>
-       No, you can create memes without an account.
+       No. You can create memes without signing up or creating an account.
       </p>
      </div>
     </div>
     <div class="faq-item">
-     <button class="faq-question">
-      4. How many meme templates are available?
-     </button>
-     <div class="faq-answer">
+     <h3>
+      <button aria-controls="faq-answer-4" aria-expanded="false" class="faq-question" type="button">
+       How many meme templates are available?
+      </button>
+     </h3>
+     <div class="faq-answer" id="faq-answer-4">
       <p>
        Meme Express provides access to over 10,000 meme templates, with new templates added regularly.
       </p>
      </div>
     </div>
     <div class="faq-item">
-     <button class="faq-question">
-      5. Can I upload my own images?
-     </button>
-     <div class="faq-answer">
+     <h3>
+      <button aria-controls="faq-answer-5" aria-expanded="false" class="faq-question" type="button">
+       Does Meme Express add a watermark to my memes?
+      </button>
+     </h3>
+     <div class="faq-answer" id="faq-answer-5">
+      <p>
+       No. Meme Express never adds its own watermark. If you like, you can add a watermark with your own brand name.
+      </p>
+     </div>
+    </div>
+    <div class="faq-item">
+     <h3>
+      <button aria-controls="faq-answer-6" aria-expanded="false" class="faq-question" type="button">
+       Can I upload my own images?
+      </button>
+     </h3>
+     <div class="faq-answer" id="faq-answer-6">
       <p>
        Yes. You can upload your own photos or images and turn them into memes.
       </p>
      </div>
     </div>
     <div class="faq-item">
-     <button class="faq-question">
-      6. Why can't I find a specific meme template?
-     </button>
-     <div class="faq-answer">
+     <h3>
+      <button aria-controls="faq-answer-7" aria-expanded="false" class="faq-question" type="button">
+       Can I use Meme Express on iPhone?
+      </button>
+     </h3>
+     <div class="faq-answer" id="faq-answer-7">
+      <p>
+       Yes. Open meme-express.io.vn in Safari and tap Launch on Web. You can also add it to your Home Screen to use it like an app
+                    (
+       <a href="https://youtube.com/shorts/jJvhzI0J0w4?feature=share" rel="noopener" target="_blank">
+        see how
+       </a>
+       ).
+      </p>
+     </div>
+    </div>
+    <div class="faq-item">
+     <h3>
+      <button aria-controls="faq-answer-8" aria-expanded="false" class="faq-question" type="button">
+       Why can't I find a specific meme template?
+      </button>
+     </h3>
+     <div class="faq-answer" id="faq-answer-8">
       <p>
        Some templates may be removed due to copyright issues or may not have been added yet.
       </p>
      </div>
     </div>
     <div class="faq-item">
-     <button class="faq-question">
-      7. What make Meme Express different from other meme editors?
-     </button>
-     <div class="faq-answer">
+     <h3>
+      <button aria-controls="faq-answer-9" aria-expanded="false" class="faq-question" type="button">
+       What makes Meme Express different from other meme editors?
+      </button>
+     </h3>
+     <div class="faq-answer" id="faq-answer-9">
       <ul>
        <li>
-        Meme Express is created by a person who actually uses memes every day, from making fun via chatting, to advertise products.
+        Meme Express is made by someone who uses memes every day, from joking around in chats to advertising products.
        </li>
        <li>
-        Meme Express uses a Story-like editor to add text &amp; images to meme. That's easier than traditional meme editors.
+        Meme Express uses a Story-like editor to add text and images to memes, which is easier than traditional meme editors.
        </li>
        <li>
-        Meme Express also allows users to optionally add watermarks with their own brand names.
+        Meme Express also lets you add watermarks with your own brand name, if you want to.
        </li>
       </ul>
       <p>
-       In summary, Meme Express is created from real-life need of its creator.
+       In summary, Meme Express was created from its creator's real-life needs.
       </p>
      </div>
     </div>
    </div>
   </section>
+  <!-- FAQ structured data: keep the questions and answers in sync with the FAQ above -->
+  <script type="application/ld+json">
+   {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Meme Express?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Meme Express is a free meme maker app that lets you browse 10,000+ meme templates, add your own captions, and create memes quickly on your phone or computer."}
+            },
+            {
+                "@type": "Question",
+                "name": "Is Meme Express free to use?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes! All features of Meme Express are now free."}
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need an account to create memes?",
+                "acceptedAnswer": {"@type": "Answer", "text": "No. You can create memes without signing up or creating an account."}
+            },
+            {
+                "@type": "Question",
+                "name": "How many meme templates are available?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Meme Express provides access to over 10,000 meme templates, with new templates added regularly."}
+            },
+            {
+                "@type": "Question",
+                "name": "Does Meme Express add a watermark to my memes?",
+                "acceptedAnswer": {"@type": "Answer", "text": "No. Meme Express never adds its own watermark. If you like, you can add a watermark with your own brand name."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I upload my own images?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can upload your own photos or images and turn them into memes."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use Meme Express on iPhone?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes. Open meme-express.io.vn in Safari and tap Launch on Web. You can also add it to your Home Screen to use it like an app."}
+            },
+            {
+                "@type": "Question",
+                "name": "Why can't I find a specific meme template?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Some templates may be removed due to copyright issues or may not have been added yet."}
+            },
+            {
+                "@type": "Question",
+                "name": "What makes Meme Express different from other meme editors?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Meme Express is made by someone who uses memes every day, from joking around in chats to advertising products. It uses a Story-like editor to add text and images to memes, which is easier than traditional meme editors. It also lets you add watermarks with your own brand name, if you want to. In summary, Meme Express was created from its creator's real-life needs."}
+            }
+        ]
+    }
+  </script>
   <script>
    /* CAROUSEL AUTO SLIDE */
     const carousel = document.getElementById('carousel');
@@ -339,23 +706,42 @@
         }
     }
 
+    /* FAQ: one answer open at a time */
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
-            const item = button.parentElement;
+            const item = button.closest('.faq-item');
+            const opening = !item.classList.contains('active');
 
-            // Optional: close other items
             document.querySelectorAll('.faq-item').forEach(faq => {
-                if (faq !== item) {
-                    faq.classList.remove('active');
-                }
+                faq.classList.remove('active');
+                faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
             });
 
-            item.classList.toggle('active');
+            if (opening) {
+                item.classList.add('active');
+                button.setAttribute('aria-expanded', 'true');
+            }
         });
     });
   </script>
   <footer>
-   © 2026 Meme Express - N.D.Y
+   <nav aria-label="Footer" class="footer-links">
+    <a href="/gallery.html">
+     Meme Templates
+    </a>
+    <a href="/about.html">
+     About
+    </a>
+    <a href="/privacy_policy.html">
+     Privacy Policy
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.ease_studio.meme" rel="noopener" target="_blank">
+     Meme Express on Google Play
+    </a>
+   </nav>
+   <p>
+    © 2026 Meme Express - N.D.Y
+   </p>
   </footer>
  </body>
 </html>
