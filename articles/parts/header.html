@@ -1,16 +1,139 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meme Express – Go Fun The World!</title>
+<title>Meme Express – Free Meme Generator &amp; 10,000+ Meme Templates</title>
+<meta name="description" content="Create funny memes in seconds with Meme Express, a free meme generator with 10,000+ templates. Add text, images and stickers. No signup, no watermark.">
 
-<meta name="description" content="Create funny memes instantly with Meme Express, a free meme generator and meme maker featuring 10,000+ meme templates. Add text, images, stickers, and watermarks with no signup required.">
+<!-- Homepage only: any other page using this header needs its own canonical and og:url. -->
+<link rel="canonical" href="https://meme-express.io.vn/">
+<meta name="robots" content="index, follow, max-image-preview:large">
 
-<meta name="keywords" content="meme generator, meme maker, meme editor, create memes online, meme templates, free memes, meme creator, make memes, no watermark meme generator, funny memes">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<meta name="theme-color" content="#181818">
 
+<!-- Link previews when the page is shared (Facebook, Zalo, X, Discord...) -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Meme Express – Go Fun The World!">
+<meta property="og:site_name" content="Meme Express">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://meme-express.io.vn/">
+<meta property="og:title" content="Meme Express – Free Meme Generator &amp; 10,000+ Meme Templates">
 <meta property="og:description" content="Create and customize memes with 10,000+ templates. Free online meme generator with no signup required and no watermark.">
+<meta property="og:image" content="https://meme-express.io.vn/assets/screenshots/meme_express_homepage.png">
+<meta property="og:image:alt" content="Meme Express app home screen">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="stylesheet" href="/styles.css"/>
+<style>
+    /* Homepage additions (these can be moved into styles.css) */
+
+    /* Second line of the <h1> */
+    .intro-section h1 .hero-subtitle {
+        display: block;
+        margin-top: 0.3em;
+        font-size: max(0.5em, 1rem);
+        color: #ffffff;
+    }
+
+    /* "Go Fun The World" keeps the look of the old <h3> */
+    .intro-section p.hero-tagline {
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        max-width: none;
+        margin-bottom: 2rem;
+        color: #ffffff;
+        opacity: 0.8;
+        font-size: 1.17em;
+        font-weight: bold;
+        line-height: normal;
+    }
+
+    /* Download links look like the old buttons */
+    a.button-black {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* Room for the longer FAQ answers */
+    .faq-item.active .faq-answer {
+        max-height: 1000px;
+    }
+
+    .faq-answer a {
+        color: #ffd400;
+    }
+
+    /* Popular templates */
+    .templates-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 110px 20px 40px;
+        text-align: center;
+    }
+
+    .templates-section h2 {
+        color: #ffd400;
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+
+    .templates-section h3 {
+        color: #f5f5f5;
+        font-size: 1.1rem;
+        margin: 28px 0 14px;
+    }
+
+    .templates-section p {
+        color: #d0d0d0;
+        line-height: 1.7;
+    }
+
+    .template-links {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .templates-more {
+        margin-top: 28px;
+    }
+
+    /* Footer links */
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 22px;
+        margin-bottom: 14px;
+    }
+
+    footer a {
+        color: #cccccc;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: #ffd400;
+    }
+
+    @media (max-width: 768px) {
+        .intro-section p.hero-tagline {
+            font-size: 1rem;
+        }
+
+        .templates-section {
+            padding: 80px 16px 30px;
+        }
+
+        .templates-section h2 {
+            font-size: 1.7rem;
+        }
+    }
+</style>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS8HSYMMVF"></script>
 <script>
@@ -23,30 +146,53 @@
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Meme Express",
-        "url": "https://meme-express.io.vn",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Web, Android, iOS",
-        "description": "Create funny memes instantly with Meme Express, a free meme generator and meme maker featuring 10,000+ meme templates. Add text, images, stickers, and watermarks with no signup required.",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "featureList": [
-            "10,000+ meme templates",
-            "Story-like meme editor",
-            "No signup required",
-            "No watermark",
-            "Add text and images",
-            "Custom watermarks",
-            "Download and share memes"
-        ],
-        "publisher": {
-            "@type": "Person",
-            "name": "N.D.Y",
-            "url": "https://meme-express.io.vn"
-        }
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://meme-express.io.vn/#website",
+                "url": "https://meme-express.io.vn/",
+                "name": "Meme Express",
+                "inLanguage": "en"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://meme-express.io.vn/#app",
+                "name": "Meme Express",
+                "url": "https://meme-express.io.vn/",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "Web, Android, iOS",
+                "description": "Create funny memes instantly with Meme Express, a free meme generator and meme maker featuring 10,000+ meme templates. Add text, images, stickers, and watermarks with no signup required.",
+                "image": "https://meme-express.io.vn/favicon.png",
+                "screenshot": [
+                    "https://meme-express.io.vn/assets/screenshots/meme_express_homepage.png",
+                    "https://meme-express.io.vn/assets/screenshots/meme_express_editor.png",
+                    "https://meme-express.io.vn/assets/screenshots/meme_express_watermark.png",
+                    "https://meme-express.io.vn/assets/screenshots/meme_express_share.png"
+                ],
+                "installUrl": "https://play.google.com/store/apps/details?id=com.ease_studio.meme",
+                "sameAs": [
+                    "https://play.google.com/store/apps/details?id=com.ease_studio.meme"
+                ],
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "featureList": [
+                    "10,000+ meme templates",
+                    "Story-like meme editor",
+                    "No signup required",
+                    "No watermark",
+                    "Add text and images",
+                    "Custom watermarks",
+                    "Download and share memes"
+                ],
+                "publisher": {
+                    "@type": "Person",
+                    "name": "N.D.Y",
+                    "url": "https://meme-express.io.vn/"
+                }
+            }
+        ]
     }
 </script>
