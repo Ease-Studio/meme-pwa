@@ -779,6 +779,8 @@ GALLERY_PAGES = [  # (meme JSON file, output HTML file)
     ("./articles/gallery/drake_meme.json", "./drake_meme.html"),
     ("./articles/gallery/what_meme.json", "./what_meme.html"),
     ("./articles/gallery/speed_dating_meme.json", "./speed_dating_meme.html"),
+    ("./articles/gallery/brain_meme.json", "./expanding_brain_meme.html"),
+    ("./articles/gallery/wake_up_meme.json", "./waking_up_brain_meme.html"),
 ]
 
 SEARCH_RESULT_PAGES = [  # (search keyword, output HTML file)
@@ -797,6 +799,7 @@ SEARCH_RESULT_PAGES = [  # (search keyword, output HTML file)
     ("Thinking", "./thinking_memes.html"),
     ("Friday", "./friday_memes.html"),
     ("Shocked", "./shocked_memes.html"),
+    ("Brain", "./brain_memes.html"),
 ]
 
 
