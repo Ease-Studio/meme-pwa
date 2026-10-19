@@ -415,6 +415,11 @@ def render_install_section(search_term: str, heading: str) -> str:
                 <li>Search for <strong>"{term}"</strong>.</li>
                 <li>Optional: <a href="{esc(IPHONE_INSTALL_VIDEO_URL)}" target="_blank" rel="noopener">see how to install the web app on your iPhone</a>.</li>
             </ol>
+            
+            <h3 class="h5 mt-4">Tutorial</h3>
+            <ul>
+                <li>See how to make a meme with app Meme Express: <a href="https://youtube.com/shorts/IeusHhcE5CU" target="_blank">click here</a></li>
+            </ul>
 
         </div>
     </div>
