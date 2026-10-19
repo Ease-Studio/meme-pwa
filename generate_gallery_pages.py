@@ -31,7 +31,7 @@ from search import search
 # -------------------------------------------------------------------------------------
 
 SITE_NAME = "Meme Express"
-SITE_TAGLINE = "A Good Meme Maker • Go Fun The World!"
+SITE_TAGLINE = "A Meme Maker On Mobile • Go Fun The World!"
 SITE_URL = "https://meme-express.io.vn/"  # the generated pages are served from the site root
 LOGO_PATH = "/assets/icon.png"
 PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.ease_studio.meme"
